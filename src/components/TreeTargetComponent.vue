@@ -82,7 +82,7 @@ watch(
             outlined
             clearable
             v-model="dataStore.targetFilter"
-            placeholder="Tìm mục tiêu..."
+            placeholder="Tìm học phần..."
           >
           </q-input>
         </div>

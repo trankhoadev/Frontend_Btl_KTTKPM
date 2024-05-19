@@ -128,6 +128,173 @@ export const useUtilStore = defineStore("dataStore", {
     /* authorization */
     listRoles: [],
     listPermissions: [],
+    targetDataCourseTickedData: [],
+    targetDataCourse: [
+      {
+        label: "2021",
+        id: "year_2021",
+        level: 1,
+        children: [
+          {
+            label: "Phân tích thiết kế hệ thống",
+            id: "course_1",
+            level: 2,
+            children: [
+              {
+                label: "Thứ 2: 9:00 - 11:00",
+                id: "time_1",
+                level: 3,
+              },
+              {
+                label: "Thứ 4: 13:00 - 15:00",
+                id: "time_2",
+                level: 3,
+              },
+            ],
+          },
+          {
+            label: "Lập trình hướng đối tượng",
+            id: "course_2",
+            level: 2,
+            children: [
+              {
+                label: "Thứ 3: 10:00 - 12:00",
+                id: "time_3",
+                level: 3,
+              },
+              {
+                label: "Thứ 5: 14:00 - 16:00",
+                id: "time_4",
+                level: 3,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        label: "2022",
+        id: "year_2022",
+        level: 1,
+        children: [
+          {
+            label: "Kỹ thuật lập trình",
+            id: "course_3",
+            level: 2,
+            children: [
+              {
+                label: "Thứ 2: 8:00 - 10:00",
+                id: "time_5",
+                level: 3,
+              },
+              {
+                label: "Thứ 4: 12:00 - 14:00",
+                id: "time_6",
+                level: 3,
+              },
+            ],
+          },
+          {
+            label: "Cơ sở dữ liệu",
+            id: "course_4",
+            level: 2,
+            children: [
+              {
+                label: "Thứ 3: 9:00 - 11:00",
+                id: "time_7",
+                level: 3,
+              },
+              {
+                label: "Thứ 5: 13:00 - 15:00",
+                id: "time_8",
+                level: 3,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        label: "2023",
+        id: "year_2023",
+        level: 1,
+        children: [
+          {
+            label: "Nhập môn trí tuệ nhân tạo",
+            id: "course_5",
+            level: 2,
+            children: [
+              {
+                label: "Thứ 2: 10:00 - 12:00",
+                id: "time_9",
+                level: 3,
+              },
+              {
+                label: "Thứ 4: 14:00 - 16:00",
+                id: "time_10",
+                level: 3,
+              },
+            ],
+          },
+          {
+            label: "Kinh tế học",
+            id: "course_6",
+            level: 2,
+            children: [
+              {
+                label: "Thứ 3: 8:00 - 10:00",
+                id: "time_11",
+                level: 3,
+              },
+              {
+                label: "Thứ 5: 12:00 - 14:00",
+                id: "time_12",
+                level: 3,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        label: "2024",
+        id: "year_2024",
+        level: 1,
+        children: [
+          {
+            label: "Quản trị dự án",
+            id: "course_7",
+            level: 2,
+            children: [
+              {
+                label: "Thứ 2: 11:00 - 13:00",
+                id: "time_13",
+                level: 3,
+              },
+              {
+                label: "Thứ 4: 15:00 - 17:00",
+                id: "time_14",
+                level: 3,
+              },
+            ],
+          },
+          {
+            label: "Toán cao cấp",
+            id: "course_8",
+            level: 2,
+            children: [
+              {
+                label: "Thứ 3: 11:00 - 13:00",
+                id: "time_15",
+                level: 3,
+              },
+              {
+                label: "Thứ 5: 15:00 - 17:00",
+                id: "time_16",
+                level: 3,
+              },
+            ],
+          },
+        ],
+      },
+    ],
   }),
   // persist: {
   //   storage: localStorage,

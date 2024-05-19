@@ -118,17 +118,17 @@ export default {
    */
 
   //Điều chỉnh mục tiêu - Adjust targets
-  adjustTargetTitle: "Chi tiết mục tiêu",
-  adjustTargetInputTargetName: "Tên mục tiêu",
-  adjustTargetInputTargetParent: "Mục tiêu cha",
-  adjustTargetInputTargetType: "Loại mục tiêu",
+  adjustTargetTitle: "Chi tiết học phần",
+  adjustTargetInputTargetName: "Tên học phần",
+  adjustTargetInputTargetParent: "Học phần bắt buộc",
+  adjustTargetInputTargetType: "Loại học phần",
   adjustTargetInputFormula: "Phương pháp tính",
   adjustTargetInputFrequency: "Tần suất đo",
   adjustTargetInputDefaultValue: "Chỉ tiêu (Phấn đấu)",
   adjustTargetInputMinValue: "Ngưỡng đạt",
   adjustTargetInputImportance: "Mức độ quan trọng",
   adjustTargetInputDesc: "Mô tả PP và công thức tính",
-  adjustTargetInputTechName: "Tên kỹ thuật",
+  adjustTargetInputTechName: "Tên học phần",
   adjustTargetInputUnit: "Đơn vị tính",
   adjustTargetInputSourceMeasure: "Nguồn đo",
   adjustTargetTitleAdd: "Thêm mục tiêu con cho",
@@ -264,13 +264,13 @@ export default {
   funcWarningSelectCompanyData:
     "Vui lòng chọn đơn vị bất kỳ bên sơ đồ tổ chức bên trái để tiếp tục !",
   funcWarningSelectTargetData:
-    "Vui lòng chọn mục tiêu bất kỳ bên sơ đồ tổ chức bên trái để tiếp tục !",
+    "Vui lòng chọn học phần bất kỳ bên sơ đồ tổ chức bên trái để tiếp tục !",
   funcInputWarningFillData: "Không được để rỗng",
   funcWarningFillRole: "Vui lòng chọn phân quyền !",
   funcGoToPage: "Đi tới trang",
   funcTreeInputStruct: "Tìm đơn vị tổ chức...",
   funcTreeInputRouter: "Tìm đường dẫn...",
-  funcTreeInputTarget: "Tìm mục tiêu...",
+  funcTreeInputTarget: "Tìm học phần...",
   funcGoToPage: "Đi tới trang",
 
   /**

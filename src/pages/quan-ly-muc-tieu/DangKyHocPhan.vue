@@ -114,14 +114,16 @@ watch(
 
           <div class="q-pa-md" style="margin-top: 5vh">
             <q-tree
-              v-if="storeUtil.targetDataTree.length"
+              v-if="storeUtil.targetDataCourse.length"
               class="full-height"
               full-height
               :filter="targetDetailStore.targetFilter"
-              :nodes="storeUtil.targetDataTree"
-              node-key="_id"
+              :nodes="storeUtil.targetDataCourse"
+              node-key="id"
               selected-color="primary"
+              tick-strategy="leaf"
               v-model:selected="targetDetailStore.targetSelected"
+              v-model:ticked="storeUtil.targetDataCourseTickedData"
               default-expand-all
             >
             </q-tree>
@@ -330,7 +332,7 @@ watch(
                   type="submit"
                   :disable="targetDetailStore.oneTargetData.isCorner"
                 />
-                <q-btn
+                <!-- <q-btn
                   :label="t('funcRemove')"
                   class="q-px-lg q-py-sm"
                   color="red-5"
@@ -340,7 +342,7 @@ watch(
                     )
                   "
                   :disable="targetDetailStore.oneTargetData.isCorner"
-                />
+                /> -->
               </div>
             </div>
           </q-form>

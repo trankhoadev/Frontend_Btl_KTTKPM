@@ -120,20 +120,20 @@ export default {
    */
 
   //Điều chỉnh mục tiêu - Adjust targets
-  adjustTargetTitle: "Target details",
-  adjustTargetInputTargetName: "Target name",
-  adjustTargetInputTargetParent: "Parent target",
-  adjustTargetInputTargetType: "Target type",
+  adjustTargetTitle: "Course details",
+  adjustTargetInputTargetName: "Course name",
+  adjustTargetInputTargetParent: "Parent Course",
+  adjustTargetInputTargetType: "Course type",
   adjustTargetInputFormula: "Formula",
   adjustTargetInputFrequency: "Measurement frequency",
-  adjustTargetInputDefaultValue: "Targets to strive for",
+  adjustTargetInputDefaultValue: "Course to strive for",
   adjustTargetInputMinValue: "Threshold reached",
   adjustTargetInputImportance: "Critical level",
   adjustTargetInputDesc: "Description of calculation method",
   adjustTargetInputTechName: "Tech name",
   adjustTargetInputUnit: "Unit",
   adjustTargetInputSourceMeasure: "Measurement source",
-  adjustTargetTitleAdd: "Add child target for",
+  adjustTargetTitleAdd: "Add child Course for",
 
   //Target Page
   targetTitle: "Target List",
@@ -267,13 +267,13 @@ export default {
   funcWarningSelectCompanyData:
     "Please select any department on the organizational chart on the left to continue !",
   funcWarningSelectTargetData:
-    "Please select any goal on the left organizational chart to continue !",
+    "Please select any course on the left tree to continue !",
   funcInputWarningFillData: "Cannot be empty",
   funcWarningFillRole: "Please choose permissions!",
   funcGoToPage: "Go to page",
   funcTreeInputStruct: "Search company struct...",
   funcTreeInputRouter: "Search router...",
-  funcTreeInputTarget: "Search target...",
+  funcTreeInputTarget: "Search course...",
   funcGoToPage: "Go to Page",
 
   /**

@@ -6,11 +6,8 @@ import SoDoToChuc from "@/pages/quan-ly-don-vi/SoDoToChuc.vue";
 import CapToChuc from "@/pages/quan-ly-don-vi/CapToChuc.vue";
 
 /* Muc Tieu */
-import DieuChinhMucTieu from "@/pages/quan-ly-muc-tieu/DieuChinhMucTieu.vue";
+import DangKyHocPhan from "@/pages/quan-ly-muc-tieu/DangKyHocPhan.vue";
 import XemBangMucTieu from "@/pages/quan-ly-muc-tieu/XemBangMucTieu.vue";
-import LoaiMucTieu from "@/pages/quan-ly-muc-tieu/LoaiMucTieu.vue";
-import PhuongPhapTinh from "@/pages/quan-ly-muc-tieu/PhuongPhapTinh.vue";
-import TanSuatDo from "@/pages/quan-ly-muc-tieu/TanSuatDo.vue";
 import ThietLapThongSoDauVao from "@/pages/quan-ly-muc-tieu/ThietLapThongSoDauVao.vue";
 
 /* Nhan Vien */
@@ -61,25 +58,7 @@ const routes = [
 
       {
         path: "list/:id?",
-        component: DieuChinhMucTieu,
-        meta: { requiresAuth: true },
-      },
-
-      {
-        path: "type",
-        component: LoaiMucTieu,
-        meta: { requiresAuth: true },
-      },
-
-      {
-        path: "formula",
-        component: PhuongPhapTinh,
-        meta: { requiresAuth: true },
-      },
-
-      {
-        path: "frequency",
-        component: TanSuatDo,
+        component: DangKyHocPhan,
         meta: { requiresAuth: true },
       },
 
