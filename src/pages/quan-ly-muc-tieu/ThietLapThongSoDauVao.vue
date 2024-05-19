@@ -90,11 +90,6 @@ const toggleValue = () => {
         icon="60fps_select"
         :label="t('taskbarFrequentlyCheck')"
       />
-      <q-tab
-        name="tab4"
-        icon="percent"
-        :label="t('topLimitInput')"
-      />
     </q-tabs>
 
     <q-tab-panels v-model="storeCaiDatMucTieu.tabSelected" animated>
@@ -687,83 +682,6 @@ const toggleValue = () => {
             </q-card-section>
           </q-card>
         </q-dialog>
-      </q-tab-panel>
-
-      <q-tab-panel name="tab4">
-        <div class="q-pa-lg flex flex-center" style="height: 80vh">
-          <q-card
-            class="my-card q-pa-lg"
-            style="
-              width: 50%;
-              height: 90%;
-              border-radius: 12px;
-              margin-bottom: 20%;
-            "
-          >
-            <q-card-section>
-              <div class="flex justify-between">
-                <div class="text-h5 text-bold q-mb-lg">
-                  {{ t("topLimitTitle") }}
-                </div>
-
-                <!-- <q-icon
-                  class="cursor-pointer"
-                  name="delete"
-                  size="md"
-                  @click="
-                    storeCaiDatMucTieu.showDialogListDeleted(
-                      3,
-                      storeTanSuatDo.listFrequencyDisable.length
-                    )
-                  "
-                /> -->
-              </div>
-            </q-card-section>
-
-            <q-card-section
-              style="
-                border: 3px solid #f3f3f3;
-                border-radius: 8px;
-                height: 80%;
-                padding-bottom: 5%;
-              "
-            >
-              <q-form
-                @submit="
-                  !storeCaiDatMucTieu.isHaveLimitValue
-                    ? storeCaiDatMucTieu.postCreateLimitValue(
-                        +storeCaiDatMucTieu.createLimitValue
-                      )
-                    : storeCaiDatMucTieu.postUpdateLimitValue(
-                        storeCaiDatMucTieu.limitValue
-                      )
-                "
-                class="q-gutter-md"
-              >
-                <div v-if="!storeCaiDatMucTieu.isHaveLimitValue">
-                  <q-input
-                    v-model="storeCaiDatMucTieu.createLimitValue"
-                    type="number"
-                    :label="t('topLimitInput')"
-                    outlined
-                  />
-                </div>
-                <div v-else>
-                  <q-input
-                    v-model="storeCaiDatMucTieu.limitValue"
-                    type="number"
-                    :label="t('topLimitInput')"
-                    outlined
-                  />
-                </div>
-
-                <div class="flex center full-width">
-                  <q-btn style="margin: 0 auto;" type="submit" color="primary" :label="t('funcSave')" />
-                </div>
-              </q-form>
-            </q-card-section>
-          </q-card>
-        </div>
       </q-tab-panel>
     </q-tab-panels>
   </div>

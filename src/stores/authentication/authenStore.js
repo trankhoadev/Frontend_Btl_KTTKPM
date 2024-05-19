@@ -41,8 +41,8 @@ export const useAuthenticationStore = defineStore("storeAuthentication", {
   getters: {},
   actions: {
     async getInit() {
-      this.username = "yonnon123";
-      this.password = "123456aA@";
+      this.username = "student";
+      this.password = "123456";
     },
 
     async postLogin(userName, passWord) {

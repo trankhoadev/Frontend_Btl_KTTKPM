@@ -15,8 +15,9 @@ export default {
   loginWarningSamePassword: "RePassword did'nt similar with password",
   loginRememberPassword: "Remember password",
   loginSignInBtn: "Login",
-  loginCompanyName: "Register for the course",
-  loginCompanyDesc: "Industrial University of Ho Chi Minh City",
+  loginCompanyName: "AT DaTa",
+  loginCompanyDesc:
+    "Providing consulting services on comprehensive integrated management systems for businesses",
   loginCreateAccount: "Sign up",
   loginBackToLogin: "Back to Login Page",
   loginSignUpBtn: "Sign Up",
@@ -60,7 +61,7 @@ export default {
   importTargetWarningNotSetFrequency:
     "You have not set the measurement frequency. Go to setup page now ?",
   importTargetWarningNotAlreadyHaveTargetData:
-    "Target data has been imported. Go to the dashboard now ?",
+    "Data has been imported. Go to the dashboard now ?",
   importTargetTitleH1: "Information",
   importTargetDownloadText: "Download the sample file's Excel import data",
   importStructDownloadDescription:
@@ -120,20 +121,20 @@ export default {
    */
 
   //Điều chỉnh mục tiêu - Adjust targets
-  adjustTargetTitle: "Course details",
-  adjustTargetInputTargetName: "Course name",
-  adjustTargetInputTargetParent: "Parent Course",
-  adjustTargetInputTargetType: "Course type",
+  adjustTargetTitle: "Target details",
+  adjustTargetInputTargetName: "Target name",
+  adjustTargetInputTargetParent: "Parent target",
+  adjustTargetInputTargetType: "Target type",
   adjustTargetInputFormula: "Formula",
   adjustTargetInputFrequency: "Measurement frequency",
-  adjustTargetInputDefaultValue: "Course to strive for",
+  adjustTargetInputDefaultValue: "Targets to strive for",
   adjustTargetInputMinValue: "Threshold reached",
   adjustTargetInputImportance: "Critical level",
   adjustTargetInputDesc: "Description of calculation method",
   adjustTargetInputTechName: "Tech name",
   adjustTargetInputUnit: "Unit",
   adjustTargetInputSourceMeasure: "Measurement source",
-  adjustTargetTitleAdd: "Add child Course for",
+  adjustTargetTitleAdd: "Add child target for",
 
   //Target Page
   targetTitle: "Target List",
@@ -213,20 +214,20 @@ export default {
   //Settings
   taskbarImportData: "Import data",
   taskbarImportCompanyStructure: "Import company structure",
-  taskbarImportTarget: "Import targets",
+  taskbarImportTarget: "Import Course",
   taskbarDivide: "Allocation",
   taskbarViewTableNeedAllocate: "See target table for allocation",
   taskbarTargetCompany: "Allocation of targets by organization",
   taskbarDivideTime: "Allocation by time",
   taskbarDivideCompany: "Allocation by individuals",
-  taskbarCompany: "My course",
-  taskbarLevelCompany: "View class schedule",
+  taskbarCompany: "Organizational management",
+  taskbarLevelCompany: "Organizational level",
   taskbarTreeCompany: "Organizational tree",
-  taskbarTarget: "Target management",
+  taskbarTarget: "Course management",
   taskbarViewTableTarget: "View target table",
   taskbarAdjustTarget: "Adjust targets",
-  taskbarTargetType: "Course management",
-  taskbarFrequentlyCheck: "Register for the course",
+  taskbarTargetType: "Target type",
+  taskbarFrequentlyCheck: "Measurement frequency",
   taskbarTargetSetup: "Set input parameters",
   taskbarFormulaType: "Calculation method",
   taskbarEmployee: "Employee manager",
@@ -237,7 +238,7 @@ export default {
   taskbarListEmployee: "List of employee",
   taskbarSettings: "Application settings",
   taskbarSettingsTarget: "Target settings",
-  taskbarEmployeeJob: "My information",
+  taskbarEmployeeJob: "Employee Job",
   taskbarChart: "Chart",
   taskbarChartCompany: "Chart by unit",
   taskbarChartTime: "Chart by time",
@@ -267,13 +268,13 @@ export default {
   funcWarningSelectCompanyData:
     "Please select any department on the organizational chart on the left to continue !",
   funcWarningSelectTargetData:
-    "Please select any course on the left tree to continue !",
+    "Please select any goal on the left organizational chart to continue !",
   funcInputWarningFillData: "Cannot be empty",
   funcWarningFillRole: "Please choose permissions!",
   funcGoToPage: "Go to page",
   funcTreeInputStruct: "Search company struct...",
   funcTreeInputRouter: "Search router...",
-  funcTreeInputTarget: "Search course...",
+  funcTreeInputTarget: "Search target...",
   funcGoToPage: "Go to Page",
 
   /**

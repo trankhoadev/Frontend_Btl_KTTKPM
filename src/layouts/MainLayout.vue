@@ -79,12 +79,169 @@ onBeforeMount(async () => {
   // nodes = handleRouterData;
 });
 
+var nodes = ref([]);
+
+const userName = ref("");
+
 onMounted(async () => {
   await storeUtils.getInit();
   await searchRouterNameByHref(router.currentRoute._rawValue.href);
   // await storeUtils.getInit();
   /* set title name for page */
   document.title = storeSetting.routerName || titleNameDefault;
+
+  /* DEVICE ROUTER FOR EACH ACCOUNT */
+  const dataObject = JSON.parse(localStorage.getItem("userData"));
+  userName.value = dataObject.name;
+  switch (userName.value) {
+    case "student":
+      nodes.value = [
+        {
+          label: t("taskbarCompany"),
+          group: true,
+          icon: "apartment",
+          items: [
+            {
+              href: "/structure/level",
+              iconName: "account_tree",
+              contentName: t("taskbarLevelCompany"),
+            },
+          ],
+        },
+
+        {
+          label: t("taskbarTarget"),
+          group: true,
+          icon: "ads_click",
+          items: [
+            {
+              href: "/target/list",
+              iconName: "edit_document",
+              contentName: t("taskbarAdjustTarget"),
+            },
+          ],
+        },
+
+        {
+          label: t("taskbarEmployee"),
+          group: true,
+          icon: "person_search",
+          items: [
+            {
+              href: "/employees/job",
+              iconName: "engineering",
+              contentName: t("taskbarEmployeeJob"),
+            },
+
+            {
+              href: "/employees/list",
+              iconName: "edit_document",
+              contentName: t("taskbarAdjustTarget"),
+            },
+          ],
+        },
+      ];
+      break;
+
+    case "teacher":
+      nodes.value = [
+        {
+          label: t("taskbarCompany"),
+          group: true,
+          icon: "apartment",
+          items: [
+            {
+              href: "/structure/level",
+              iconName: "account_tree",
+              contentName: t("taskbarLevelCompany"),
+            },
+          ],
+        },
+      ];
+      break;
+
+    case "admin":
+      nodes.value = [
+        {
+          label: t("taskbarImportData"),
+          group: true,
+          icon: "ios_share",
+          items: [
+            {
+              href: "/import/company-level",
+              iconName: "account_tree",
+              contentName: t("taskbarImportCompanyStructure"),
+            },
+
+            {
+              href: "/import/target",
+              iconName: "format_list_bulleted_add",
+              contentName: t("taskbarImportTarget"),
+            },
+          ],
+        },
+
+        {
+          label: t("taskbarCompany"),
+          group: true,
+          icon: "apartment",
+          items: [
+            {
+              href: "/structure/level",
+              iconName: "account_tree",
+              contentName: t("taskbarLevelCompany"),
+            },
+            {
+              href: "/structure/list",
+              iconName: "domain_add",
+              contentName: t("taskbarTreeCompany"),
+            },
+          ],
+        },
+
+        {
+          label: t("taskbarTarget"),
+          group: true,
+          icon: "ads_click",
+          items: [
+            {
+              href: "/target/list",
+              iconName: "edit_document",
+              contentName: t("taskbarAdjustTarget"),
+            },
+
+            {
+              href: "/target/setup",
+              iconName: "settings",
+              contentName: t("taskbarTargetSetup"),
+            },
+          ],
+        },
+
+        {
+          label: t("taskbarEmployee"),
+          group: true,
+          icon: "person_search",
+          items: [
+            {
+              href: "/employees/list",
+              iconName: "contact_page",
+              contentName: t("taskbarListEmployee"),
+            },
+
+            {
+              href: "/employees/job",
+              iconName: "engineering",
+              contentName: t("taskbarEmployeeJob"),
+            },
+          ],
+        },
+      ];
+      break;
+
+    default:
+      break;
+  }
 });
 
 onUpdated(() => {
@@ -101,68 +258,10 @@ watch(
   }
 );
 
-var nodes = [
-  {
-    label: t("taskbarCompany"),
-    group: true,
-    icon: "apartment",
-    items: [
-      {
-        href: "/structure/level",
-        iconName: "account_tree",
-        contentName: t("taskbarLevelCompany"),
-      },
-      // {
-      //   href: "/structure/list",
-      //   iconName: "domain_add",
-      //   contentName: t("taskbarTreeCompany"),
-      // },
-    ],
-  },
-
-  {
-    label: t("taskbarTarget"),
-    group: true,
-    icon: "ads_click",
-    items: [
-      {
-        href: "/target/list",
-        iconName: "edit_document",
-        contentName: t("taskbarAdjustTarget"),
-      },
-
-      // {
-      //   href: "/target/setup",
-      //   iconName: "settings",
-      //   contentName: t("taskbarTargetSetup"),
-      // },
-    ],
-  },
-
-  {
-    label: t("taskbarEmployee"),
-    group: true,
-    icon: "person_search",
-    items: [
-      // {
-      //   href: "/employees/list",
-      //   iconName: "contact_page",
-      //   contentName: t("taskbarListEmployee"),
-      // },
-
-      {
-        href: "/employees/job",
-        iconName: "engineering",
-        contentName: t("taskbarEmployeeJob"),
-      },
-    ],
-  },
-];
-
 /* functional */
 const searchRouter = (value) => {
   storeSetting.searchResult = [];
-  nodes.filter((i) => {
+  nodes.value.filter((i) => {
     if (i?.contentName) {
       if (
         i?.contentName
@@ -176,7 +275,7 @@ const searchRouter = (value) => {
     }
   });
 
-  nodes.filter((i) => {
+  nodes.value.filter((i) => {
     if (i?.items) {
       i.items.filter((j) => {
         if (
@@ -197,7 +296,7 @@ const searchRouterNameByHref = (value) => {
   storeSetting.routerName = "";
   let valueRemovedTag = value.replace(/#/g, "");
 
-  nodes.filter((i) => {
+  nodes.value.filter((i) => {
     if (i?.contentName) {
       if (i.href === valueRemovedTag) {
         storeSetting.routerName = i.contentName;
@@ -208,7 +307,7 @@ const searchRouterNameByHref = (value) => {
   if (storeSetting.routerName) {
     return;
   } else {
-    nodes.filter((i) => {
+    nodes.value.filter((i) => {
       if (i?.items) {
         i.items.filter((j) => {
           if (j.href === valueRemovedTag) {
@@ -557,7 +656,7 @@ const filterData = (initialData, routerHrefArray) => {
         <q-list style="color: #ffffffb3; font-size: 0.95em">
           <div class="flex flex-center">
             <q-item
-              to="/chart/general"
+              :to="userName.value === 'student' ? '/chart/general' : '/'"
               style="width: 100%"
               @click="storeSetting.routerHref = ''"
             >

@@ -12,8 +12,9 @@ export default {
   loginWarningSamePassword: "Mật khẩu nhập lại không khớp",
   loginRememberPassword: "Nhớ mật khẩu",
   loginSignInBtn: "Đăng nhập",
-  loginCompanyName: "Đăng ký học phần",
-  loginCompanyDesc: "TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP TP.HỒ CHÍ MINH",
+  loginCompanyName: "AT DaTa",
+  loginCompanyDesc:
+    "Cung cấp dịch vụ tư vấn về Hệ thống quản trị tích hợp toàn diện cho các Doanh nghiệp",
   loginCreateAccount: "Đăng ký",
   loginBackToLogin: "Quay lại trang đăng nhập",
   loginSignUpBtn: "Đăng ký",
@@ -51,13 +52,13 @@ export default {
 
   /* - Import mục tiêu */
   importTargetWarningNotSetTargetType:
-    "Bạn chưa thiết lập loại mục tiêu. Đi đến trang thiết lập ngay ?",
+    "Bạn chưa thiết lập kỳ học. Đi đến trang thiết lập ngay ?",
   importTargetWarningNotSetFormula:
-    "Bạn chưa thiết lập phương pháp tính. Đi đến trang thiết lập ngay ?",
+    "Bạn chưa thiết lập thời gian học. Đi đến trang thiết lập ngay ?",
   importTargetWarningNotSetFrequency:
-    "Bạn chưa thiết lập tần suất đo. Đi đến trang thiết lập ngay ?",
+    "Bạn chưa thiết lập năm học. Đi đến trang thiết lập ngay ?",
   importTargetWarningNotAlreadyHaveTargetData:
-    "Dữ liệu mục tiêu đã được import. Đi đến trang tổng quan ngay ?",
+    "Dữ liệu đã được import. Đi đến trang tổng quan ngay ?",
   importTargetTitleH1: "Thông tin",
   importTargetDownloadText: "Download mẫu file Excel nhập dữ liệu",
   importTargetDownloadDescription:
@@ -118,40 +119,40 @@ export default {
    */
 
   //Điều chỉnh mục tiêu - Adjust targets
-  adjustTargetTitle: "Chi tiết học phần",
-  adjustTargetInputTargetName: "Tên học phần",
-  adjustTargetInputTargetParent: "Học phần bắt buộc",
-  adjustTargetInputTargetType: "Loại học phần",
+  adjustTargetTitle: "Chi tiết mục tiêu",
+  adjustTargetInputTargetName: "Tên mục tiêu",
+  adjustTargetInputTargetParent: "Mục tiêu cha",
+  adjustTargetInputTargetType: "Loại mục tiêu",
   adjustTargetInputFormula: "Phương pháp tính",
   adjustTargetInputFrequency: "Tần suất đo",
   adjustTargetInputDefaultValue: "Chỉ tiêu (Phấn đấu)",
   adjustTargetInputMinValue: "Ngưỡng đạt",
   adjustTargetInputImportance: "Mức độ quan trọng",
   adjustTargetInputDesc: "Mô tả PP và công thức tính",
-  adjustTargetInputTechName: "Tên học phần",
+  adjustTargetInputTechName: "Tên kỹ thuật",
   adjustTargetInputUnit: "Đơn vị tính",
   adjustTargetInputSourceMeasure: "Nguồn đo",
   adjustTargetTitleAdd: "Thêm mục tiêu con cho",
 
   //Target Type
-  targetTitle: "Danh Sách Loại Mục Tiêu",
-  targetAddBoxTitle: "Thêm loại mục tiêu",
-  targetAddInputName: "Tên loại mục tiêu",
+  targetTitle: "Danh Sách Học Kỳ",
+  targetAddBoxTitle: "Thêm loại học kỳ",
+  targetAddInputName: "Tên loại học kỳ",
   /* Update target type */
-  targetUpdateBoxTitle: "Cập nhật loại mục tiêu",
+  targetUpdateBoxTitle: "Cập nhật loại học kỳ",
   // + Phuong Phap Tinh - Formular Page
-  formulaTitle: "Danh Sách Các Phương Pháp Tính",
-  formulaAddBoxTitle: "Thêm phương pháp tính",
-  formulaAddInputName: "Tên phương pháp tính",
+  formulaTitle: "Danh Sách Các Thời Gian",
+  formulaAddBoxTitle: "Thêm phương thời gian dạy",
+  formulaAddInputName: "Tên phương thời gian dạy",
   formulaAddInputDesc: "Mô tả",
   /* update formular */
-  formulaUpdateBoxTitle: "Cập nhật pháp tính",
+  formulaUpdateBoxTitle: "Cập nhật thời gian dạy",
   // + Tan Suat Do - Frequency Page
-  frequencyTitle: "Danh Sách Tần Suất Đo",
-  frequencyAddBoxTitle: "Thêm tần suất đo",
-  frequencyAddInputName: "Tên tần suất đo",
-  frequencyDescInputName: "Mô tả tần suất đo",
-  frequencyUpdateBoxTitle: "Cập nhật tần suất đo",
+  frequencyTitle: "Danh Sách năm học",
+  frequencyAddBoxTitle: "Thêm năm học",
+  frequencyAddInputName: "Tên năm học",
+  frequencyDescInputName: "Mô tả năm học",
+  frequencyUpdateBoxTitle: "Cập nhật năm học",
   /* Cận trên - Toplimit */
   topLimitTitle: "Vui lòng thiết lập cận trên",
   topLimitInput: "Cận trên",
@@ -210,21 +211,22 @@ export default {
   //Settings
   taskbarImportData: "Import dữ liệu",
   taskbarImportCompanyStructure: "Import cây tổ chức",
-  taskbarImportTarget: "Import mục tiêu",
+  taskbarImportTarget: "Import môn học",
   taskbarDivide: "Phân bổ",
   taskbarViewTableNeedAllocate: "Xem bảng mục tiêu cần phân bổ",
   taskbarTargetCompany: "Phân bổ mục tiêu theo tổ chức",
   taskbarDivideTime: "Phân bổ theo kỳ",
   taskbarDivideCompany: "Phân bổ theo cá nhân",
-  taskbarCompany: "Môn học của tôi",
-  taskbarLevelCompany: "Xem lịch học",
+  taskbarCompany: "Quản lý tổ chức",
+  taskbarLevelCompany: "Cấp tổ chức",
   taskbarTreeCompany: "Sơ đồ tổ chức",
-  taskbarTarget: "Quản lý học phần",
-  taskbarAdjustTarget: "Đăng ký học phần",
-  taskbarTargetType: "Loại mục tiêu",
-  taskbarFrequentlyCheck: "Tần suất đo",
+  taskbarTarget: "Quản lý khóa học",
+  taskbarViewTableTarget: "Xem bảng mục tiêu",
+  taskbarAdjustTarget: "Điều chỉnh mục tiêu",
+  taskbarTargetType: "Học kỳ",
+  taskbarFrequentlyCheck: "Niên khóa",
   taskbarTargetSetup: "Thiết lập thông số đầu vào",
-  taskbarFormulaType: "Phương pháp tính",
+  taskbarFormulaType: "Thời gian dạy",
   taskbarEmployee: "Quản lý nhân viên",
   taskbarRole: "Phân quyền",
   taskbarAssignPermission: "Phân quyền cho tài khoản",
@@ -233,7 +235,7 @@ export default {
   taskbarListEmployee: "Danh sách nhân viên",
   taskbarSettings: "Cài đặt ứng dụng",
   taskbarSettingsTarget: "Cài đặt mục tiêu",
-  taskbarEmployeeJob: "Thông tin của tôi",
+  taskbarEmployeeJob: "Chức danh nhân viên",
   taskbarChart: "Báo cáo",
   taskbarChartCompany: "Báo cáo theo đơn vị",
   taskbarChartTime: "Báo cáo theo kỳ",
@@ -264,13 +266,13 @@ export default {
   funcWarningSelectCompanyData:
     "Vui lòng chọn đơn vị bất kỳ bên sơ đồ tổ chức bên trái để tiếp tục !",
   funcWarningSelectTargetData:
-    "Vui lòng chọn học phần bất kỳ bên sơ đồ tổ chức bên trái để tiếp tục !",
+    "Vui lòng chọn mục tiêu bất kỳ bên sơ đồ tổ chức bên trái để tiếp tục !",
   funcInputWarningFillData: "Không được để rỗng",
   funcWarningFillRole: "Vui lòng chọn phân quyền !",
   funcGoToPage: "Đi tới trang",
   funcTreeInputStruct: "Tìm đơn vị tổ chức...",
   funcTreeInputRouter: "Tìm đường dẫn...",
-  funcTreeInputTarget: "Tìm học phần...",
+  funcTreeInputTarget: "Tìm mục tiêu...",
   funcGoToPage: "Đi tới trang",
 
   /**

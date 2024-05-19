@@ -247,7 +247,7 @@ export const useSoDoToChucStore = defineStore("soDoToChucStore", {
         return;
       }
       Dialog.create({
-        message: `Bạn chắc chắn muốn xoá mục tiêu: <strong>${objDelete.name}</strong>?`,
+        message: `Bạn chắc chắn muốn xoá đơn vị: <strong>${objDelete.name}</strong>?`,
         cancel: true,
         html: true,
       }).onOk(async () => {

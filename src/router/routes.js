@@ -1,12 +1,17 @@
 import MainLayout from "layouts/MainLayout.vue";
+import WelcomePage from "@/pages/WelcomePage.vue";
 import LoginPage from "@/pages/authentication/LoginPage.vue";
+
+/* import */
+import ImportCayToChuc from "@/pages/import-du-lieu/ImportCayToChuc.vue";
+import ImportMucTieu from "@/pages/import-du-lieu/ImportHocPhan.vue";
 
 /* Don Vi */
 import SoDoToChuc from "@/pages/quan-ly-don-vi/SoDoToChuc.vue";
 import CapToChuc from "@/pages/quan-ly-don-vi/CapToChuc.vue";
 
 /* Muc Tieu */
-import DangKyHocPhan from "@/pages/quan-ly-muc-tieu/DangKyHocPhan.vue";
+import DieuChinhMucTieu from "@/pages/quan-ly-muc-tieu/DieuChinhMucTieu.vue";
 import XemBangMucTieu from "@/pages/quan-ly-muc-tieu/XemBangMucTieu.vue";
 import ThietLapThongSoDauVao from "@/pages/quan-ly-muc-tieu/ThietLapThongSoDauVao.vue";
 
@@ -27,12 +32,35 @@ const routes = [
   {
     path: "/",
     component: MainLayout,
+    children: [
+      { path: "/", component: WelcomePage, meta: { requiresAuth: true } },
+      // { path: "/login", component: LoginPage, meta: { ableBackLogin: true } },
+    ],
   },
 
   {
     path: "/login",
     component: LoginPage,
     meta: { ableBackLogin: true },
+  },
+
+  /* import router */
+  {
+    path: "/import",
+    component: MainLayout,
+    children: [
+      {
+        path: "company-level",
+        component: ImportCayToChuc,
+        meta: { requiresAuth: true },
+      },
+
+      {
+        path: "target",
+        component: ImportMucTieu,
+        meta: { requiresAuth: true },
+      },
+    ],
   },
 
   /* company structure router */
@@ -58,7 +86,7 @@ const routes = [
 
       {
         path: "list/:id?",
-        component: DangKyHocPhan,
+        component: DieuChinhMucTieu,
         meta: { requiresAuth: true },
       },
 
