@@ -624,9 +624,17 @@ const filterData = (initialData, routerHrefArray) => {
           />
           <div class="flex column justify-center q-px-md">
             <div class="q-py-sm flex column">
-              <span class="text-h5 text-bold">Khoa Tran</span>
+              <span class="text-h5 text-bold">{{ userName }}</span>
 
-              Sinh viên
+              <span class='text-subtitle1'>
+                {{
+                  userName === "admin"
+                    ? "Quản lý ứng dụng"
+                    : userName === "student"
+                    ? "Sinh Viên"
+                    : "Giảng viên"
+                }}</span
+              >
             </div>
 
             <div class="text-green text-subtitle1">
