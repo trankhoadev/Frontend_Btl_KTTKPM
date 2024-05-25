@@ -576,7 +576,7 @@ watch(
 </script>
 
 <template>
-  <div class="q-pa-md" style="height: 92vh; overflow-y: hidden">
+  <div class="q-pa-md" style="height: 92vh;">
     <!-- Notice user still not config "target type" -->
     <q-banner
       v-if="!storeUtils.targetTypeData.length"
@@ -814,7 +814,8 @@ watch(
                       :label="t('importTargetInputTargetName')"
                       v-model="storeImportMucTieu.objectUpdate.name"
                       outlined
-                      class="q-mt-md"
+                      class="q-mt-lg"
+                      :rules="[(val) => !!val || t('funcInputWarningFillData')]"
                     />
 
                     <q-input
@@ -824,7 +825,7 @@ watch(
                         storeImportMucTieu.objectUpdate.methodAndCalDescription
                       "
                       outlined
-                      class="q-mt-md"
+                      :rules="[(val) => !!val || t('funcInputWarningFillData')]"
                     />
 
                     <q-select
@@ -834,7 +835,7 @@ watch(
                       option-value="techName"
                       option-label="name"
                       :label="t('importTargetInputAssign')"
-                      class="q-mt-md"
+                      :rules="[(val) => !!val || t('funcInputWarningFillData')]"
                     />
 
                     <div class="row">
@@ -845,7 +846,10 @@ watch(
                         option-label="name"
                         option-value="_id"
                         outlined
-                        class="q-mt-md col"
+                        class="q-mr-sm col"
+                        :rules="[
+                          (val) => !!val || t('funcInputWarningFillData'),
+                        ]"
                       />
 
                       <q-select
@@ -855,9 +859,14 @@ watch(
                         option-label="name"
                         option-value="_id"
                         outlined
-                        class="q-mt-md col q-px-sm"
+                        class="q-ml-sm col q-px-sm"
+                        :rules="[
+                          (val) => !!val || t('funcInputWarningFillData'),
+                        ]"
                       />
+                    </div>
 
+                    <div class="row">
                       <q-select
                         v-model="
                           storeImportMucTieu.objectUpdate.frequencyMeasure
@@ -867,17 +876,10 @@ watch(
                         option-label="name"
                         option-value="_id"
                         outlined
-                        class="q-mt-md col"
-                      />
-                    </div>
-
-                    <div class="row">
-                      <q-input
-                        type="text"
-                        :label="t('importTargetInputDepartment')"
-                        v-model="storeImportMucTieu.objectUpdate.measureName"
-                        outlined
-                        class="q-mt-md col"
+                        class="q-mr-sm col"
+                        :rules="[
+                          (val) => !!val || t('funcInputWarningFillData'),
+                        ]"
                       />
 
                       <q-input
@@ -885,42 +887,10 @@ watch(
                         :label="t('importTargetInputUnit')"
                         v-model="storeImportMucTieu.objectUpdate.unit"
                         outlined
-                        class="q-mt-md col q-px-sm"
-                      />
-                      <q-input
-                        type="number"
-                        :label="t('importTargetInputImportance')"
-                        v-model="
-                          storeImportMucTieu.objectUpdate.importanceLevel
-                        "
-                        outlined
-                        class="q-mt-md col"
-                      />
-                    </div>
-
-                    <div class="row">
-                      <q-input
-                        type="number"
-                        :label="t('importTargetInputDefaultValue')"
-                        v-model="storeImportMucTieu.objectUpdate.defaultValue"
-                        outlined
-                        class="q-mt-md col"
-                      />
-
-                      <q-input
-                        type="number"
-                        :label="t('importTargetInputMinValue')"
-                        v-model="storeImportMucTieu.objectUpdate.minValue"
-                        outlined
-                        class="q-mt-md col q-px-sm"
-                      />
-
-                      <q-input
-                        v-model="storeImportMucTieu.objectUpdate.documentSource"
-                        outlined
-                        type="text"
-                        class="q-mt-md col"
-                        :label="t('importTargetInputSourceDepartment')"
+                        class="q-ml-sm col q-px-sm"
+                        :rules="[
+                          (val) => !!val || t('funcInputWarningFillData'),
+                        ]"
                       />
                     </div>
 

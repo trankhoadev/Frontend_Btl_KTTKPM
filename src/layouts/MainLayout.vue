@@ -218,24 +218,24 @@ onMounted(async () => {
           ],
         },
 
-        {
-          label: t("taskbarEmployee"),
-          group: true,
-          icon: "person_search",
-          items: [
-            {
-              href: "/employees/list",
-              iconName: "contact_page",
-              contentName: t("taskbarListEmployee"),
-            },
+        // {
+        //   label: t("taskbarEmployee"),
+        //   group: true,
+        //   icon: "person_search",
+        //   items: [
+        //     {
+        //       href: "/employees/list",
+        //       iconName: "contact_page",
+        //       contentName: t("taskbarListEmployee"),
+        //     },
 
-            {
-              href: "/employees/job",
-              iconName: "engineering",
-              contentName: t("taskbarEmployeeJob"),
-            },
-          ],
-        },
+        //     {
+        //       href: "/employees/job",
+        //       iconName: "engineering",
+        //       contentName: t("taskbarEmployeeJob"),
+        //     },
+        //   ],
+        // },
       ];
       break;
 

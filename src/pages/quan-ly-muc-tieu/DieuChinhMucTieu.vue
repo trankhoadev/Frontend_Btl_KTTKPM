@@ -160,6 +160,13 @@ watch(
                   </div>
                 </div>
                 <q-input
+                  :label="t('adjustTargetInputTechName')"
+                  v-model="targetDetailStore.oneTargetData.techName"
+                  filled
+                  disable
+                />
+
+                <q-input
                   :label="t('adjustTargetInputTargetName')"
                   v-model="targetDetailStore.oneTargetData.name"
                   outlined
@@ -175,7 +182,7 @@ watch(
                   disable
                 />
                 <div class="row">
-                  <div class="col q-mr-md">
+                  <div class="col q-mr-sm">
                     <q-select
                       :label="t('adjustTargetInputTargetType')"
                       :options="targetDetailStore.targetTypeData"
@@ -198,7 +205,7 @@ watch(
                     </q-select>
                   </div>
 
-                  <div class="col q-mr-md">
+                  <div class="col q-ml-sm">
                     <q-select
                       :label="t('adjustTargetInputFormula')"
                       :options="targetDetailStore.formulaData"
@@ -220,8 +227,21 @@ watch(
                       </template>
                     </q-select>
                   </div>
+                </div>
 
-                  <div class="col">
+                <div class="row">
+                  <div class="col q-mr-sm">
+                    <q-input
+                      :label="t('adjustTargetInputUnit')"
+                      v-model="targetDetailStore.oneTargetData.unit"
+                      outlined
+                      class="q-pb-sm"
+                      :rules="[(val) => !!val || t('funcInputWarningFillData')]"
+                      :disable="targetDetailStore.oneTargetData.isCorner"
+                    />
+                  </div>
+
+                  <div class="col q-ml-sm">
                     <q-select
                       :label="t('adjustTargetInputFrequency')"
                       :options="targetDetailStore.frequencyData"
@@ -244,43 +264,6 @@ watch(
                     </q-select>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col q-mr-md">
-                    <q-input
-                      :label="t('adjustTargetInputDefaultValue')"
-                      v-model="targetDetailStore.oneTargetData.defaultValue"
-                      outlined
-                      class="q-pb-sm"
-                      :rules="[(val) => !!val || t('funcInputWarningFillData')]"
-                      :disable="targetDetailStore.oneTargetData.isCorner"
-                    />
-                  </div>
-                  <div class="col q-mr-md">
-                    <q-input
-                      :label="t('adjustTargetInputMinValue')"
-                      v-model="targetDetailStore.oneTargetData.minValue"
-                      outlined
-                      class="q-pb-sm"
-                      :rules="[(val) => !!val || t('funcInputWarningFillData')]"
-                      :disable="targetDetailStore.oneTargetData.isCorner"
-                    />
-                  </div>
-                  <div class="col">
-                    <q-input
-                      :label="t('adjustTargetInputImportance')"
-                      v-model="targetDetailStore.oneTargetData.importanceLevel"
-                      outlined
-                      class="q-pb-sm"
-                      :rules="[
-                        (val) => !!val || t('funcInputWarningFillData'),
-                        (val) =>
-                          (val >= 0 && val <= 5) ||
-                          'Mức độ quan trọng chỉ từ 0 đến 5',
-                      ]"
-                      :disable="targetDetailStore.oneTargetData.isCorner"
-                    />
-                  </div>
-                </div>
                 <q-input
                   :label="t('adjustTargetInputDesc')"
                   v-model="
@@ -291,37 +274,6 @@ watch(
                   :rules="[(val) => !!val || t('funcInputWarningFillData')]"
                   :disable="targetDetailStore.oneTargetData.isCorner"
                 />
-
-                <div class="row">
-                  <div class="col q-mr-md">
-                    <q-input
-                      :label="t('adjustTargetInputTechName')"
-                      v-model="targetDetailStore.oneTargetData.techName"
-                      filled
-                      disable
-                    />
-                  </div>
-                  <div class="col q-mr-md">
-                    <q-input
-                      :label="t('adjustTargetInputUnit')"
-                      v-model="targetDetailStore.oneTargetData.unit"
-                      outlined
-                      class="q-pb-sm"
-                      :rules="[(val) => !!val || t('funcInputWarningFillData')]"
-                      :disable="targetDetailStore.oneTargetData.isCorner"
-                    />
-                  </div>
-                  <div class="col">
-                    <q-input
-                      :label="t('adjustTargetInputSourceMeasure')"
-                      v-model="targetDetailStore.oneTargetData.measureSource"
-                      outlined
-                      class="q-pb-sm"
-                      :rules="[(val) => !!val || t('funcInputWarningFillData')]"
-                      :disable="targetDetailStore.oneTargetData.isCorner"
-                    />
-                  </div>
-                </div>
               </div>
               <div class="q-pa-md q-gutter-md flex justify-end">
                 <q-btn
@@ -384,7 +336,7 @@ watch(
               />
 
               <div class="row">
-                <div class="col q-mr-md">
+                <div class="col q-mr-sm">
                   <q-select
                     :label="t('adjustTargetInputTargetType')"
                     :options="targetDetailStore.targetTypeData"
@@ -405,7 +357,7 @@ watch(
                   </q-select>
                 </div>
 
-                <div class="col q-mr-md">
+                <div class="col q-ml-sm">
                   <q-select
                     :label="t('adjustTargetInputFormula')"
                     :options="targetDetailStore.formulaData"
@@ -425,8 +377,19 @@ watch(
                     </template>
                   </q-select>
                 </div>
+              </div>
 
-                <div class="col">
+              <div class="row">
+                <div class="col q-mr-sm">
+                  <q-input
+                    :label="t('adjustTargetInputUnit')"
+                    v-model="targetDetailStore.oneTargetDataCreate.unit"
+                    outlined
+                    :rules="[(val) => !!val || t('funcInputWarningFillData')]"
+                  />
+                </div>
+
+                <div class="col q-ml-sm">
                   <q-select
                     :label="t('adjustTargetInputFrequency')"
                     :options="targetDetailStore.frequencyData"
@@ -449,63 +412,6 @@ watch(
                   </q-select>
                 </div>
               </div>
-              <div class="row">
-                <div class="col q-mr-md">
-                  <q-input
-                    :label="t('adjustTargetInputDefaultValue')"
-                    v-model="targetDetailStore.oneTargetDataCreate.defaultValue"
-                    outlined
-                    type="number"
-                    :rules="[(val) => !!val || t('funcInputWarningFillData')]"
-                  />
-                </div>
-                <div class="col q-mr-md">
-                  <q-input
-                    label="Ngưỡng đạt:"
-                    v-model="targetDetailStore.oneTargetDataCreate.minValue"
-                    outlined
-                    type="number"
-                    :rules="[(val) => !!val || t('funcInputWarningFillData')]"
-                  />
-                </div>
-                <div class="col">
-                  <q-input
-                    :label="t('adjustTargetInputImportance')"
-                    v-model="
-                      targetDetailStore.oneTargetDataCreate.importanceLevel
-                    "
-                    outlined
-                    type="number"
-                    :rules="[
-                      (val) => !!val || t('funcInputWarningFillData'),
-                      (val) =>
-                        (val >= 0 && val <= 5) ||
-                        'Mức độ quan trọng chỉ từ 0 đến 5',
-                    ]"
-                  />
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col q-mr-md">
-                  <q-input
-                    :label="t('adjustTargetInputUnit')"
-                    v-model="targetDetailStore.oneTargetDataCreate.unit"
-                    outlined
-                    :rules="[(val) => !!val || t('funcInputWarningFillData')]"
-                  />
-                </div>
-                <div class="col">
-                  <q-input
-                    :label="t('adjustTargetInputSourceMeasure')"
-                    v-model="
-                      targetDetailStore.oneTargetDataCreate.measureSource
-                    "
-                    outlined
-                    :rules="[(val) => !!val || t('funcInputWarningFillData')]"
-                  />
-                </div>
-              </div>
 
               <q-input
                 :label="t('adjustTargetInputDesc')"
@@ -526,181 +432,6 @@ watch(
           </div>
         </div>
       </div>
-
-      <!-- First time init project, user don't have any target info right here -->
-      <!-- <div v-else-if="targetDetailStore.amountOfTarget">
-          <div class="q-gutter-md q-pa-md">
-            <q-form
-              @submit="
-                targetDetailStore.postCreateTargetKpi(
-                  targetDetailStore.targetSelectedAdd
-                )
-              "
-              ref="form"
-            >
-              <div class="text-h5 q-py-md text-justify">
-                Thêm môn học con cho:
-                <q-badge
-                  color="primary"
-                  class="text-h6 q-ml-md"
-                  outline
-                  :label="targetDetailStore.firstCompanyData.name"
-                />
-              </div>
-
-              <q-input
-                class="q-mb-sm"
-                label="Tên môn học:"
-                v-model="targetDetailStore.targetSelectedAdd.name"
-                outlined
-                :rules="[(val) => !!val || t('funcInputWarningFillData')]"
-              />
-              <q-input
-                class="q-mb-md"
-                label="Mô tả môn học:"
-                v-model="targetDetailStore.targetSelectedAdd.description"
-                outlined
-                :rules="[(val) => !!val || t('funcInputWarningFillData')]"
-              />
-
-              <div class="row q-mb-md">
-                <div class="col q-mr-md">
-                  <q-input
-                    label="Phương pháp tính:"
-                    v-model="targetDetailStore.oneTargetData.cal"
-                    :filled="targetDetailStore.isNodeParent ? true : false"
-                    :outlined="targetDetailStore.isNodeParent ? false : true"
-                    :rules="[(val) => !!val || t('funcInputWarningFillData')]"
-                    :disable="targetDetailStore.isNodeParent ? true : false"
-                  />
-                </div>
-
-                <div class="col q-mr-md">
-                  <q-input
-                    label="Loại môn học:"
-                    v-model="targetDetailStore.oneTargetData.type"
-                    :filled="targetDetailStore.isNodeParent ? true : false"
-                    :outlined="targetDetailStore.isNodeParent ? false : true"
-                    :rules="[(val) => !!val || t('funcInputWarningFillData')]"
-                    :disable="targetDetailStore.isNodeParent ? true : false"
-                  />
-                </div>
-
-                <div class="col">
-                  <q-select
-                    :options="targetDetailStore.optionFilterMeasureSourceId"
-                    option-label="name"
-                    label="Nguồn đo:"
-                    @filter="targetDetailStore.filterChangeMeasureSourceId"
-                    use-input
-                    v-model="targetDetailStore.targetSelectedAdd.measureSource"
-                    outlined
-                    :rules="[(val) => !!val || t('funcInputWarningFillData')]"
-                  >
-                    <template #option="scope">
-                      <q-item
-                        v-bind="scope.itemProps"
-                        @click="
-                          targetDetailStore.onChangeMeasureourceId(scope.opt)
-                        "
-                      >
-                        <q-item-section>
-                          <q-item-label>{{ scope.label }}</q-item-label>
-                        </q-item-section>
-                      </q-item>
-                    </template>
-                  </q-select>
-                </div>
-              </div>
-
-              <q-input
-                class="q-mb-md"
-                label="Mô tả PP và công thức tính:"
-                v-model="
-                  targetDetailStore.targetSelectedAdd.descriptionMethodCal
-                "
-                outlined
-                :rules="[(val) => !!val || t('funcInputWarningFillData')]"
-              />
-
-              <div class="row q-mb-md">
-                <div class="col q-mr-md">
-                  <q-input
-                    label="Chỉ tiêu (Phấn đấu):"
-                    v-model="targetDetailStore.targetSelectedAdd.defaultValue"
-                    outlined
-                    type="number"
-                    :rules="[(val) => !!val || t('funcInputWarningFillData')]"
-                  />
-                </div>
-                <div class="col q-mr-md">
-                  <q-input
-                    label="Ngưỡng đạt:"
-                    v-model="targetDetailStore.targetSelectedAdd.minValue"
-                    outlined
-                    type="number"
-                    :rules="[(val) => !!val || t('funcInputWarningFillData')]"
-                  />
-                </div>
-                <div class="col">
-                  <q-input
-                    label="Mức độ quan trọng:"
-                    v-model="targetDetailStore.targetSelectedAdd.weight"
-                    outlined
-                    type="number"
-                    :rules="[(val) => !!val || t('funcInputWarningFillData')]"
-                  />
-                </div>
-              </div>
-
-              <div class="row q-mb-md">
-                <div class="col q-mr-md">
-                  <q-input
-                    label="Tên kỹ thuật:"
-                    v-model="targetDetailStore.targetSelectedAdd.techName"
-                    filled
-                    :rules="[(val) => !!val || t('funcInputWarningFillData')]"
-                  />
-                </div>
-                <div class="col q-mr-md">
-                  <q-input
-                    label="Đơn vị tính:"
-                    v-model="targetDetailStore.targetSelectedAdd.unit"
-                    outlined
-                    :rules="[(val) => !!val || t('funcInputWarningFillData')]"
-                  />
-                </div>
-
-                <div class="col">
-                  <q-input
-                    label="Tần suất đo:"
-                    v-model="
-                      targetDetailStore.targetSelectedAdd.frequencyMeasure
-                    "
-                    outlined
-                    :rules="[(val) => !!val || t('funcInputWarningFillData')]"
-                  />
-                </div>
-              </div>
-
-              <q-input
-                label="Ghi chú:"
-                v-model="targetDetailStore.targetSelectedAdd.note"
-                outlined
-              />
-
-              <div class="q-pa-md q-gutter-md flex flex-center">
-                <q-btn
-                  label="Thêm"
-                  class="q-px-lg q-py-sm"
-                  color="primary"
-                  type="submit"
-                />
-              </div>
-            </q-form>
-          </div>
-        </div> -->
-
       <!-- No data user click -->
       <div v-else class="full-height" style="height: 90vh !important">
         <BlankComponent
