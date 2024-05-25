@@ -106,25 +106,16 @@ export const useStoreImportMucTieu = defineStore("storeImportMucTieu", {
         const result = await api.post(url, dataFilter);
         console.log(result);
 
-        if (result.data.status === 200) {
-          Notify.create({
-            message: "Import thành công !",
-            position: "top",
-            color: "green",
-          });
+        Notify.create({
+          message: "Import thành công !",
+          position: "top",
+          color: "green",
+        });
 
-          setTimeout(() => {
-            window.location.reload();
-            Loading.hide();
-          }, 1500);
-        } else {
-          Notify.create({
-            message: `Import thất bại: ${result.data.message}`,
-            position: "top",
-            color: "red",
-          });
+        setTimeout(() => {
+          window.location.reload();
           Loading.hide();
-        }
+        }, 1500);
       } catch (err) {
         console.error("Internal Server Error: ", err);
         Loading.hide();

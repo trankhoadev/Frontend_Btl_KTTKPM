@@ -581,54 +581,53 @@ export const useUtilStore = defineStore("dataStore", {
 
       const dataExpect = transformData(arr);
 
-      const structureTarget = [
-        {
-          label: "Tài chính",
-          children: [],
-          level: 0,
-          tech: "TC",
-          _id: "-1",
-          noTick: true,
-        },
+      // const structureTarget = [
+      //   {
+      //     label: "Tài chính",
+      //     children: [],
+      //     level: 0,
+      //     tech: "TC",
+      //     _id: "-1",
+      //     noTick: true,
+      //   },
 
-        {
-          label: "Khách hàng",
-          children: [],
-          level: 0,
-          tech: "KH",
-          _id: "-2",
-          noTick: true,
-        },
+      //   {
+      //     label: "Khách hàng",
+      //     children: [],
+      //     level: 0,
+      //     tech: "KH",
+      //     _id: "-2",
+      //     noTick: true,
+      //   },
 
-        {
-          label: "Quy trình nội bộ",
-          children: [],
-          level: 0,
-          tech: "QT",
-          _id: "-3",
-          noTick: true,
-        },
+      //   {
+      //     label: "Quy trình nội bộ",
+      //     children: [],
+      //     level: 0,
+      //     tech: "QT",
+      //     _id: "-3",
+      //     noTick: true,
+      //   },
 
-        {
-          label: "Học hỏi và phát triển",
-          children: [],
-          level: 0,
-          tech: "HH",
-          _id: "-4",
-          noTick: true,
-        },
-      ];
+      //   {
+      //     label: "Học hỏi và phát triển",
+      //     children: [],
+      //     level: 0,
+      //     tech: "HH",
+      //     _id: "-4",
+      //     noTick: true,
+      //   },
+      // ];
 
-      /* handle add target into 4 base of target (TC, KH, QTNB, HHPT) */
-      structureTarget.forEach((i) => {
-        dataExpect.map((j) => {
-          if (i.tech === j.beLongTo) {
-            i.children.push(j);
-          }
-        });
-      });
+      // structureTarget.forEach((i) => {
+      //   dataExpect.map((j) => {
+      //     if (i.tech === j.beLongTo) {
+      //       i.children.push(j);
+      //     }
+      //   });
+      // });
 
-      return structureTarget;
+      return dataExpect;
     },
 
     /**

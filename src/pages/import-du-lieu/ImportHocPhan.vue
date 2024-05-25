@@ -203,6 +203,15 @@ const divideArray = (arr, start, end) => {
       : "";
     dataObject.isDisable = false;
     dataObject.children = [];
+
+    /* add them */
+    dataObject.measureName = "";
+    dataObject.documentSource = "";
+    dataObject.importanceLevel = "";
+    dataObject.defaultValue = "";
+    dataObject.minValue = "";
+    dataObject.beLongTo = "TC";
+
     try {
       dataObject.formulaName = dataObject.formulaName.toUpperCase();
     } catch (err) {
@@ -253,6 +262,10 @@ const divideArray = (arr, start, end) => {
 
     console.log(expectedTree.value.length);
 
+    if (dataObject.level === 1) {
+      dataObject.idAssign = "";
+    }
+
     return dataObject;
   });
 
@@ -264,7 +277,6 @@ const divideArray = (arr, start, end) => {
 };
 
 const buildTree = (arr) => {
-  console.log(JSON.stringify(arr, null, 2));
   function transformData(initialData) {
     const result = [];
 
@@ -302,6 +314,8 @@ const buildTree = (arr) => {
   });
 
   expectedTree.value = dataExpect;
+
+  console.log(JSON.stringify(dataExpect, null, 2));
   storeImportMucTieu.targetTreeData = dataExpect;
 };
 
@@ -757,7 +771,7 @@ watch(
               </q-input>
             </div>
 
-            <div class="q-pa-md" style="margin-top: 6vh;">
+            <div class="q-pa-md" style="margin-top: 6vh">
               <q-splitter v-model="splitterModel" style="min-height: 100vh">
                 <template v-slot:before>
                   <q-tree
@@ -791,7 +805,7 @@ watch(
                 <template v-slot:after>
                   <div
                     class="fixed-content fixed z-max q-px-sm q-mt-sm full-height"
-                    style="width: 63%;"
+                    style="width: 63%"
                     v-if="!storeImportMucTieu.isShowFormAddNewStructure"
                   >
                     <span class="text-h4">{{ t("importTargetTitleH1") }}</span>
@@ -942,9 +956,17 @@ watch(
                   <div
                     v-else
                     class="fixed-content fixed z-max q-px-sm full-height q-mt-sm"
-                    style="width: 64%; overflow-y: scroll; overflow-x: hidden; max-height: 65vh"
+                    style="
+                      width: 64%;
+                      overflow-y: scroll;
+                      overflow-x: hidden;
+                      max-height: 65vh;
+                    "
                   >
-                    <div class="flex full-width q-my-none q-py-none" style="align-items: center;">
+                    <div
+                      class="flex full-width q-my-none q-py-none"
+                      style="align-items: center"
+                    >
                       <q-icon
                         name="arrow_back_ios"
                         color="black"
@@ -958,7 +980,11 @@ watch(
 
                       <div
                         class="flex"
-                        style="width: 80%; align-items: center; white-space: nowrap"
+                        style="
+                          width: 80%;
+                          align-items: center;
+                          white-space: nowrap;
+                        "
                       >
                         <span class="text-h6 q-py-none q-my-none">
                           {{ t("importTargetTitleAdd") }}:
@@ -1187,9 +1213,7 @@ watch(
         </template> -->
 
         <template v-slot:navigation>
-          <hr
-            style="background-color: #f5f5f5 !important; height: 1px"
-          />
+          <hr style="background-color: #f5f5f5 !important; height: 1px" />
           <q-stepper-navigation
             class="q-mt-md"
             style="display: flex; justify-content: flex-end"
@@ -1267,6 +1291,6 @@ input[type="file"] {
 }
 
 .q-layout-container > div > div {
-  max-height: none
+  max-height: none;
 }
 </style>
