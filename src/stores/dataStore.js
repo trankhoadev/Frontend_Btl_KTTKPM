@@ -310,6 +310,7 @@ export const useUtilStore = defineStore("dataStore", {
       await this.getAllTargetType();
       await this.getAllFormula();
       await this.getAllFrequency();
+      await this.addTickedInTree();
 
       this.targetDataTree = this.buildTreeTarget(this.targetData);
       // await this.getTargetKpiTree();
@@ -1098,43 +1099,35 @@ export const useUtilStore = defineStore("dataStore", {
       }
     },
 
-    // async getListMonthDisplayToSelect(structId) {
-    //   try {
-    //     console.log(structId);
-    //     let check = false;
-    //     this.arrMonthSelectBox = [];
-    //     for (let i = 1; i <= 12; ++i) {
-    //       const url = `target-by-structs/?structId=${structId}&month=${i}&isStaff=false`;
-    //       const result = await api.get(url);
-    //       console.log(result);
+    postRegisterCourse(arrData) {
+      try {
+        localStorage.setItem("targetId", JSON.stringify(arrData));
 
-    //       if (result.data.data?.length) {
-    //         this.arrMonthSelectBox.push({ label: `Tháng ${i}`, value: i });
+        Notify.create({
+          type: "positive",
+          message: "Thao tác thành công !",
+          position: "top-right",
+          color: "white",
+          textColor: "black",
+          iconColor: "green",
+          timeout: 2000,
+          multiLine: true,
+          progress: true,
+          classes: "custom-size-notify",
+        });
+      } catch (err) {
+        console.error("Caught error when handle postRegisterCourse: ", err);
+      }
+    },
 
-    //         if (i === this.selectMonth.value) {
-    //           check = true;
-    //         }
-    //       }
-    //     }
-
-    //     this.arrMonthSelectBox = this.arrMonthSelectBox.filter(
-    //       (val, index, self) =>
-    //         index ===
-    //         self.findIndex(
-    //           (t) => t.value === val.value && t.label === val.label
-    //         )
-    //     );
-
-    //     if (this.arrMonthSelectBox?.length) {
-    //       if (!check) {
-    //         this.selectMonth = this.arrMonthSelectBox[0];
-    //       }
-    //     }
-
-    //     return this.arrMonthSelectBox;
-    //   } catch (err) {
-    //     console.error("Internal Server Error getListMonthDisplay(): ", err);
-    //   }
-    // },
+    addTickedInTree() {
+      try {
+        this.targetDataCourseTickedData = JSON.parse(
+          localStorage.getItem("targetId")
+        );
+      } catch (err) {
+        console.error("Caught error when handle in addTickedInTree(): ", err);
+      }
+    },
   },
 });

@@ -103,7 +103,7 @@ export default {
   structLevelTitle: "Thông tin cơ bản của cấp tổ chức",
   structLevelCompanyName: "Tên đơn vị",
   structLevelDesc: "Mô tả đơn vị",
-  structLevelTechName: "Tên kỹ thuật",
+  structLevelTechName: "Tên học phần",
   structLevelDateCreate: "Ngày tạo",
   structLevelDateUpdate: "Ngày cập nhật",
   structLevelTitleAdd: "Thêm mới cấp tổ chức con cho",
@@ -128,7 +128,7 @@ export default {
   adjustTargetInputMinValue: "Ngưỡng đạt",
   adjustTargetInputImportance: "Mức độ quan trọng",
   adjustTargetInputDesc: "Mô tả PP và công thức tính",
-  adjustTargetInputTechName: "Tên kỹ thuật",
+  adjustTargetInputTechName: "Tên học phần",
   adjustTargetInputUnit: "Số tín chỉ",
   adjustTargetInputSourceMeasure: "Nguồn đo",
   adjustTargetTitleAdd: "Thêm môn học con cho",
@@ -282,4 +282,8 @@ export default {
   inputJob: "Chọn chức danh",
   inputEmployee: "Chọn nhân viên",
   inputTopLimit: "Cận trên (%)",
+
+  titleV1: "Học phần đã đăng ký",
+  titleV2: "Đăng ký học phần",
+  button1: "Đăng ký",
 };

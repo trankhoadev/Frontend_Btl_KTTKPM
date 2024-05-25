@@ -97,49 +97,36 @@ onMounted(async () => {
     case "student":
       nodes.value = [
         {
-          label: t("taskbarCompany"),
-          group: true,
-          icon: "apartment",
-          items: [
-            {
-              href: "/structure/level",
-              iconName: "account_tree",
-              contentName: t("taskbarLevelCompany"),
-            },
-          ],
-        },
-
-        {
           label: t("taskbarTarget"),
           group: true,
           icon: "ads_click",
           items: [
             {
-              href: "/target/list",
+              href: "/target/register",
               iconName: "edit_document",
-              contentName: t("taskbarAdjustTarget"),
-            },
-          ],
-        },
-
-        {
-          label: t("taskbarEmployee"),
-          group: true,
-          icon: "person_search",
-          items: [
-            {
-              href: "/employees/job",
-              iconName: "engineering",
-              contentName: t("taskbarEmployeeJob"),
+              contentName: "Đăng ký học phần",
             },
 
             {
               href: "/employees/list",
-              iconName: "edit_document",
-              contentName: t("taskbarAdjustTarget"),
+              iconName: "library_books",
+              contentName: t("titleV1"),
             },
           ],
         },
+
+        // {
+        //   label: t("taskbarEmployee"),
+        //   group: true,
+        //   icon: "person_search",
+        //   items: [
+        //     {
+        //       href: "/employees/job",
+        //       iconName: "engineering",
+        //       contentName: t("taskbarEmployeeJob"),
+        //     },
+        //   ],
+        // },
       ];
       break;
 
@@ -664,7 +651,7 @@ const filterData = (initialData, routerHrefArray) => {
         <q-list style="color: #ffffffb3; font-size: 0.95em">
           <div class="flex flex-center">
             <q-item
-              :to="userName.value === 'student' ? '/chart/general' : '/'"
+              :to="userName === 'student' ? '/chart/general' : '/'"
               style="width: 100%"
               @click="storeSetting.routerHref = ''"
             >

@@ -14,6 +14,7 @@ import CapToChuc from "@/pages/quan-ly-don-vi/CapToChuc.vue";
 import DieuChinhMucTieu from "@/pages/quan-ly-muc-tieu/DieuChinhMucTieu.vue";
 import XemBangMucTieu from "@/pages/quan-ly-muc-tieu/XemBangMucTieu.vue";
 import ThietLapThongSoDauVao from "@/pages/quan-ly-muc-tieu/ThietLapThongSoDauVao.vue";
+import DangKyHocPhan from "@/pages/quan-ly-muc-tieu/DangKyHocPhan.vue";
 
 /* Nhan Vien */
 import DanhSachNhanVien from "@/pages/quan-ly-nhan-vien/DanhSachNhanVien.vue";
@@ -78,6 +79,12 @@ const routes = [
     path: "/target",
     component: MainLayout,
     children: [
+      {
+        path: "register",
+        component: DangKyHocPhan,
+        meta: { requiresAuth: true },
+      },
+
       {
         path: "table",
         component: XemBangMucTieu,

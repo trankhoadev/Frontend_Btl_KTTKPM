@@ -284,4 +284,8 @@ export default {
   inputJob: "Select Job Title",
   inputEmployee: "Select Employee",
   inputTopLimit: "Top Limit (%)",
+
+  titleV1: "Registered course",
+  titleV2: "Register for the course",
+  button1: "Submit",
 };
