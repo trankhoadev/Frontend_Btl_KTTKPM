@@ -18,7 +18,6 @@ import DangKyHocPhan from "@/pages/quan-ly-muc-tieu/DangKyHocPhan.vue";
 
 /* Nhan Vien */
 import DanhSachNhanVien from "@/pages/quan-ly-nhan-vien/DanhSachNhanVien.vue";
-import ChucDanhNhanVien from "src/pages/quan-ly-nhan-vien/ChucDanhNhanVien.vue";
 
 /* Cai Dat */
 import CaiDatMucTieu from "@/pages/settings/CaiDatMucTieu.vue";
@@ -113,11 +112,6 @@ const routes = [
       {
         path: "list",
         component: DanhSachNhanVien,
-        meta: { requiresAuth: true },
-      },
-      {
-        path: "job",
-        component: ChucDanhNhanVien,
         meta: { requiresAuth: true },
       },
     ],

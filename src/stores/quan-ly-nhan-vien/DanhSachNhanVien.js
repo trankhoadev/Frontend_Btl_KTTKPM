@@ -23,6 +23,31 @@ export const useDanhSachNhanVienStore = defineStore("storeDanhSachNhanVien", {
     lastPage: 0,
     companyStructureData: [],
     selectCompany: {},
+    selectSemester: {
+      label: "Tất cả",
+      value: "All",
+    },
+    semesterSelectOptions: [
+      {
+        label: "Tất cả",
+        value: "All",
+      },
+
+      {
+        label: "Học kỳ 1",
+        value: "HK1",
+      },
+
+      {
+        label: "Học kỳ 2",
+        value: "HK2",
+      },
+
+      {
+        label: "Học kỳ hè",
+        value: "HKH",
+      },
+    ],
     inputSearch: "",
     stateSearching: false,
   }),

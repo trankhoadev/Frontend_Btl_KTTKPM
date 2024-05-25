@@ -167,9 +167,9 @@ export default {
   listEmployeeInputId: "Mã nhân viên",
   listEmployeeInputName: "Tên nhân viên",
   listEmployeeInputJob: "Chức danh",
-  listEmployeeInputDepartment: "Đơn vị",
+  listEmployeeInputDepartment: "Học kỳ",
   listEmployeeInputWarningJob: "Không có kết quả tìm kiếm chức danh",
-  listEmployeeInputWarningDepartment: "Không có kết quả tìm kiếm đơn vị",
+  listEmployeeInputWarningDepartment: "Không có kết quả tìm kiếm phù hợp",
 
   listEmployeeTitleUpdate: "Cập nhật dữ liệu nhân viên",
   listEmployeeInputDateJoin: "Ngày vào",

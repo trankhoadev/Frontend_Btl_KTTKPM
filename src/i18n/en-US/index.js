@@ -169,10 +169,9 @@ export default {
   listEmployeeInputId: "Employee code",
   listEmployeeInputName: "Employee name",
   listEmployeeInputJob: "Job title",
-  listEmployeeInputDepartment: "Department",
+  listEmployeeInputDepartment: "Semester",
   listEmployeeInputWarningJob: "There were no search results for the job title",
-  listEmployeeInputWarningDepartment:
-    "There were no search results for the department",
+  listEmployeeInputWarningDepartment: "There are no matching search results",
 
   listEmployeeTitleUpdate: "Update employee data",
   listEmployeeInputDateJoin: "Date join",

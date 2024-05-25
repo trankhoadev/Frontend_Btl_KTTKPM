@@ -69,7 +69,7 @@ onMounted(async () => {
       flat
       bordered
       class="my-sticky-header-table q-ma-md text-uppercase"
-      :rows="storeUtils.targetDataTickedArray"
+      :rows="storeUtils.targetDataTickedArrayTree"
       :columns="tableColumnStore.columnEmployeesTable"
       row-key="name"
       :title="t('listEmployeeTableName')"
@@ -79,41 +79,35 @@ onMounted(async () => {
     >
       <template v-slot:top-left>
         <span class="text-h6">{{ t("listEmployeeTableName") }}</span>
-        <!-- <q-select
-          outlined
-          v-model="storeDanhSachNhanVien.selectCompany"
-          use-input
-          input-debounce="0"
-          :label="t('listEmployeeInputDepartment')"
-          :options="options"
-          @filter="filterData"
-          clearable
-          option-label="name"
-          option-value="_id"
-          class="q-ml-lg"
-          :rules="[(val) => !!val || 'Dữ liệu không được rỗng !']"
-          style="min-width: 30vw"
-          @update:model-value="storeDanhSachNhanVien.getAllEmployees('first')"
-        >
-          <template v-slot:no-option>
-            <q-item>
-              <q-item-section class="text-grey">
-                {{ t("listEmployeeInputWarningDepartment") }}
-              </q-item-section>
-            </q-item>
-          </template>
-        </q-select> -->
       </template>
 
       <template v-slot:top-right>
         <div class="q-gutter-lg flex">
-          <q-btn
-            icon="person_add"
-            color="green"
-            :label="t('listEmployeeButtonAdd')"
-            @click="storeDanhSachNhanVien.isDialogAdd = true"
-          />
-
+          <q-select
+            outlined
+            v-model="storeDanhSachNhanVien.selectSemester"
+            :options="storeDanhSachNhanVien.semesterSelectOptions"
+            input-debounce="0"
+            :label="t('listEmployeeInputDepartment')"
+            option-label="label"
+            option-value="value"
+            dense
+            style="min-width: 200px"
+            :rules="[(val) => !!val || 'Dữ liệu không được rỗng !']"
+            @update:model-value="
+              storeUtils.onChangeSelectSemester(
+                storeDanhSachNhanVien.selectSemester.value
+              )
+            "
+          >
+            <template v-slot:no-option>
+              <q-item>
+                <q-item-section class="text-grey">
+                  {{ t("listEmployeeInputWarningDepartment") }}
+                </q-item-section>
+              </q-item>
+            </template>
+          </q-select>
           <q-input
             rounded
             outlined
@@ -141,7 +135,12 @@ onMounted(async () => {
           class="cursor-pointer"
           :props="props"
         >
-          <td class="text-justify" key="techName" :props="props" style="width: 10%">
+          <td
+            class="text-justify"
+            key="techName"
+            :props="props"
+            style="width: 10%"
+          >
             <span style="font-size: 1.1em"
               ><span style="white-space: pre-wrap">{{
                 props.row.techName
@@ -186,11 +185,10 @@ onMounted(async () => {
       <template v-slot:bottom>
         <div class="text-right full-width">
           <span class="text-subtitle1"
-            >Tổng học phí:
-            &nbsp;
+            >Tổng học phí: &nbsp;
             <span class="text-h5 text-bold">
-              {{ storeUtils.totalCourseFee.toLocaleString("de-DE") }} </span
-            ></span
+              {{ storeUtils.totalCourseFee.toLocaleString("de-DE") }}
+            </span></span
           >
         </div>
       </template>

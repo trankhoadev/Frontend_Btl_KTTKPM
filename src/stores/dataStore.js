@@ -130,6 +130,7 @@ export const useUtilStore = defineStore("dataStore", {
     listPermissions: [],
     targetDataCourseTickedData: [],
     targetDataTickedArray: [],
+    targetDataTickedArrayTree: [],
     totalCourseFee: 0,
     targetDataCourse: [
       {
@@ -1144,12 +1145,44 @@ export const useUtilStore = defineStore("dataStore", {
             }
           });
         });
+        this.targetDataTickedArrayTree = arrTemp;
         this.targetDataTickedArray = arrTemp;
         this.totalCourseFee = 0;
         this.targetDataTickedArray.map((i) => {
           this.totalCourseFee += +(i.unit * 600000);
         });
+
+        console.log(arrTemp);
       } catch (err) {}
+    },
+
+    onChangeSelectSemester(val) {
+      switch (val) {
+        case "All":
+          this.targetDataTickedArrayTree = this.targetDataTickedArray;
+          break;
+
+        case "HK1":
+          this.targetDataTickedArrayTree = this.targetDataTickedArray.filter(
+            (i) => i.targetTypeName === val
+          );
+          break;
+
+        case "HK2":
+          this.targetDataTickedArrayTree = this.targetDataTickedArray.filter(
+            (i) => i.targetTypeName === val
+          );
+          break;
+
+        case "HKH":
+          this.targetDataTickedArrayTree = this.targetDataTickedArray.filter(
+            (i) => i.targetTypeName === val
+          );
+          break;
+
+        default:
+          break;
+      }
     },
   },
 });
