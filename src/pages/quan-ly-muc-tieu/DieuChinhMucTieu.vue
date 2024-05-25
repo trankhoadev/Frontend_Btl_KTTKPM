@@ -179,6 +179,7 @@ watch(
                   v-model="targetDetailStore.oneTargetData.parentName"
                   outlined
                   class="q-pb-sm"
+                  v-if="targetDetailStore.oneTargetData.level !== 1"
                   disable
                 />
                 <div class="row">
