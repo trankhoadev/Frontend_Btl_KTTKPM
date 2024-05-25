@@ -162,8 +162,8 @@ export default {
    * Quản lý nhân viên - Employee manager
    */
   //Danh sách nhân viên - List of Employee
-  listEmployeeTableName: "Employee List",
-  listEmployeeButtonAdd: "Add Employee",
+  listEmployeeTableName: "List of registered courses",
+  listEmployeeButtonAdd: "Register for more",
 
   listEmployeeTitleAdd: "Add new Employee",
   listEmployeeInputId: "Employee code",

@@ -561,10 +561,10 @@ export const useTableColumnStore = defineStore("tableColumnStore", {
 
     columnEmployeesTable: [
       {
-        name: "name",
+        name: "techName",
         required: true,
-        label: "MÃ",
-        field: "name",
+        label: "MÃ HỌC PHẦN",
+        field: "techName",
         align: "left",
 
         headerStyle: "font-size: 1.1em; font-weight: bold",
@@ -583,7 +583,7 @@ export const useTableColumnStore = defineStore("tableColumnStore", {
       {
         name: "name",
         required: true,
-        label: "ĐƠN VỊ",
+        label: "SỐ TÍN CHỈ",
         field: "name",
         align: "left",
 
@@ -593,7 +593,7 @@ export const useTableColumnStore = defineStore("tableColumnStore", {
       {
         name: "name",
         required: true,
-        label: "NGÀY VÀO",
+        label: "HỌC PHÍ",
         field: "name",
         align: "left",
 
@@ -603,17 +603,7 @@ export const useTableColumnStore = defineStore("tableColumnStore", {
       {
         name: "name",
         required: true,
-        label: "NGÀY NGHỈ",
-        field: "name",
-        align: "left",
-
-        headerStyle: "font-size: 1.1em; font-weight: bold",
-      },
-
-      {
-        name: "name",
-        required: true,
-        label: "THỜI GIAN CẬP NHẬT",
+        label: "THỜI GIAN ĐĂNG KÝ",
         field: "name",
         align: "left",
 

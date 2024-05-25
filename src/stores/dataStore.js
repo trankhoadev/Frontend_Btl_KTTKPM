@@ -129,6 +129,8 @@ export const useUtilStore = defineStore("dataStore", {
     listRoles: [],
     listPermissions: [],
     targetDataCourseTickedData: [],
+    targetDataTickedArray: [],
+    totalCourseFee: 0,
     targetDataCourse: [
       {
         label: "2021",
@@ -311,6 +313,7 @@ export const useUtilStore = defineStore("dataStore", {
       await this.getAllFormula();
       await this.getAllFrequency();
       await this.addTickedInTree();
+      this.getListTargetBaseOnId();
 
       this.targetDataTree = this.buildTreeTarget(this.targetData);
       // await this.getTargetKpiTree();
@@ -1128,6 +1131,25 @@ export const useUtilStore = defineStore("dataStore", {
       } catch (err) {
         console.error("Caught error when handle in addTickedInTree(): ", err);
       }
+    },
+
+    getListTargetBaseOnId() {
+      try {
+        const arrTemp = [];
+
+        this.targetDataCourseTickedData.map((i) => {
+          this.targetData.map((j) => {
+            if (i === j._id) {
+              arrTemp.push(j);
+            }
+          });
+        });
+        this.targetDataTickedArray = arrTemp;
+        this.totalCourseFee = 0;
+        this.targetDataTickedArray.map((i) => {
+          this.totalCourseFee += +(i.unit * 600000);
+        });
+      } catch (err) {}
     },
   },
 });

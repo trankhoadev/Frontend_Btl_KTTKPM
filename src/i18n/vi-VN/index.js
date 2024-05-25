@@ -160,8 +160,8 @@ export default {
    * Quản lý nhân viên - Employee manager
    */
   //Danh sách nhân viên - List of Employee
-  listEmployeeTableName: "Bảng danh sách nhân viên",
-  listEmployeeButtonAdd: "Thêm nhân viên",
+  listEmployeeTableName: "Bảng danh sách học phần đã đăng ký",
+  listEmployeeButtonAdd: "Đăng ký thêm",
 
   listEmployeeTitleAdd: "Thêm nhân viên mới",
   listEmployeeInputId: "Mã nhân viên",
