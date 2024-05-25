@@ -16,7 +16,7 @@ export const useTableColumnStore = defineStore("tableColumnStore", {
       {
         name: "name",
         required: true,
-        label: "Mục tiêu",
+        label: "môn học",
         field: "name",
         align: "left",
 
@@ -70,7 +70,7 @@ export const useTableColumnStore = defineStore("tableColumnStore", {
       {
         name: "type",
         required: true,
-        label: "Loại mục tiêu",
+        label: "Loại môn học",
         field: "type",
         align: "left",
 
@@ -127,7 +127,7 @@ export const useTableColumnStore = defineStore("tableColumnStore", {
       {
         name: "name",
         required: true,
-        label: "TÊN MỤC TIÊU",
+        label: "TÊN môn học",
         field: "name",
         align: "left",
 
@@ -189,7 +189,7 @@ export const useTableColumnStore = defineStore("tableColumnStore", {
       {
         name: "name",
         required: true,
-        label: "TÊN MỤC TIÊU",
+        label: "TÊN môn học",
         field: "name",
         align: "center",
 
@@ -342,7 +342,7 @@ export const useTableColumnStore = defineStore("tableColumnStore", {
       {
         name: "targetName",
         required: true,
-        label: "TÊN MỤC TIÊU",
+        label: "TÊN môn học",
         field: "targetName",
         align: "left",
 
@@ -401,7 +401,7 @@ export const useTableColumnStore = defineStore("tableColumnStore", {
       {
         name: "cal",
         required: true,
-        label: "Loại mục tiêu",
+        label: "Loại môn học",
         field: "cal",
         align: "left",
 
@@ -473,7 +473,7 @@ export const useTableColumnStore = defineStore("tableColumnStore", {
       {
         name: "unit",
         required: true,
-        label: "Loại mục tiêu",
+        label: "Loại môn học",
         field: "unit",
         align: "center",
 
@@ -687,7 +687,7 @@ export const useTableColumnStore = defineStore("tableColumnStore", {
     //   {
     //     name: "name",
     //     required: true,
-    //     label: "Tên mục tiêu",
+    //     label: "Tên môn học",
     //     field: "name",
     //     align: "left",
     //
@@ -737,7 +737,7 @@ export const useTableColumnStore = defineStore("tableColumnStore", {
     //   {
     //     name: "targetType",
     //     required: true,
-    //     label: "Loại mục tiêu",
+    //     label: "Loại môn học",
     //     field: "targetType",
     //     align: "left",
     //

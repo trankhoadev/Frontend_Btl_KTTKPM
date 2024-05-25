@@ -178,8 +178,8 @@ export const useSoDoToChucStore = defineStore("soDoToChucStore", {
 
         const url = "company-structs";
         const data = {
-          name: dataInput.name, // tên mục tiêu
-          description: dataInput.description, //mô tả mục tiêu
+          name: dataInput.name, // tên môn học
+          description: dataInput.description, //mô tả môn học
           parentId: this.companySelectedViewData._id,
           structId: idStucture,
           userCreate: "KhoaTran.Nguyen",
@@ -240,7 +240,7 @@ export const useSoDoToChucStore = defineStore("soDoToChucStore", {
     deleteCompany(objDelete) {
       if (!objDelete.parentId) {
         Notify.create({
-          message: "Bạn không thể xoá mục tiêu level 1",
+          message: "Bạn không thể xoá môn học level 1",
           position: "top",
           color: "red",
         });

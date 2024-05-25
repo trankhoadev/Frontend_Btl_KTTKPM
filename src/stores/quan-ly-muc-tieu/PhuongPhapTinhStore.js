@@ -104,7 +104,7 @@ export const usePhuongPhapTinhStore = defineStore("storePhuongPhapTinh", {
         } else {
           Dialog.create({
             title: "Thông báo",
-            message: `Thêm loại mục tiêu thất bại: ${result.data.message}`,
+            message: `Thêm loại môn học thất bại: ${result.data.message}`,
             ok: true,
             cancel: false,
           });

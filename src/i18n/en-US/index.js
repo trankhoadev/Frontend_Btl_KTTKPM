@@ -15,9 +15,8 @@ export default {
   loginWarningSamePassword: "RePassword did'nt similar with password",
   loginRememberPassword: "Remember password",
   loginSignInBtn: "Login",
-  loginCompanyName: "AT DaTa",
-  loginCompanyDesc:
-    "Providing consulting services on comprehensive integrated management systems for businesses",
+  loginCompanyName: "Register for the course",
+  loginCompanyDesc: "Industrial University of Ho Chi Minh City",
   loginCreateAccount: "Sign up",
   loginBackToLogin: "Back to Login Page",
   loginSignUpBtn: "Sign Up",
@@ -53,7 +52,7 @@ export default {
   importStructAddStructTitle: "Add company struct",
   importStructAddJobTitle: "Add job title",
 
-  /* - Import mục tiêu */
+  /* - Import môn học */
   importTargetWarningNotSetTargetType:
     "You haven't set up a target type. Go to setup page now ?",
   importTargetWarningNotSetFormula:
@@ -117,10 +116,10 @@ export default {
   structTreeTitleAdd: "Add department child for",
 
   /**
-   * Quản lý mục tiêu - Target management
+   * Quản lý môn học - Target management
    */
 
-  //Điều chỉnh mục tiêu - Adjust targets
+  //Điều chỉnh môn học - Adjust targets
   adjustTargetTitle: "Target details",
   adjustTargetInputTargetName: "Target name",
   adjustTargetInputTargetParent: "Parent target",

@@ -541,7 +541,7 @@ watch(
               ref="form"
             >
               <div class="text-h5 q-py-md text-justify">
-                Thêm mục tiêu con cho:
+                Thêm môn học con cho:
                 <q-badge
                   color="primary"
                   class="text-h6 q-ml-md"
@@ -552,14 +552,14 @@ watch(
 
               <q-input
                 class="q-mb-sm"
-                label="Tên Mục tiêu:"
+                label="Tên môn học:"
                 v-model="targetDetailStore.targetSelectedAdd.name"
                 outlined
                 :rules="[(val) => !!val || t('funcInputWarningFillData')]"
               />
               <q-input
                 class="q-mb-md"
-                label="Mô tả mục tiêu:"
+                label="Mô tả môn học:"
                 v-model="targetDetailStore.targetSelectedAdd.description"
                 outlined
                 :rules="[(val) => !!val || t('funcInputWarningFillData')]"
@@ -579,7 +579,7 @@ watch(
 
                 <div class="col q-mr-md">
                   <q-input
-                    label="Loại mục tiêu:"
+                    label="Loại môn học:"
                     v-model="targetDetailStore.oneTargetData.type"
                     :filled="targetDetailStore.isNodeParent ? true : false"
                     :outlined="targetDetailStore.isNodeParent ? false : true"

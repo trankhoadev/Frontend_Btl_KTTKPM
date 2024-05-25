@@ -102,7 +102,7 @@ export const useTanSuatDo = defineStore("storeTanSuatDo", {
         } else {
           Dialog.create({
             title: "Thông báo",
-            message: `Thêm loại mục tiêu thất bại: ${result.data.message}`,
+            message: `Thêm loại môn học thất bại: ${result.data.message}`,
             ok: true,
             cancel: false,
           });
@@ -115,7 +115,7 @@ export const useTanSuatDo = defineStore("storeTanSuatDo", {
     async deleteFrequency(objectDelete) {
       Dialog.create({
         title: "Cảnh báo",
-        message: `Bạn có chắc muốn xóa loại mục tiêu: <b>${objectDelete?.name}</b> không ?`,
+        message: `Bạn có chắc muốn xóa loại môn học: <b>${objectDelete?.name}</b> không ?`,
         html: true,
         ok: true,
         cancel: true,

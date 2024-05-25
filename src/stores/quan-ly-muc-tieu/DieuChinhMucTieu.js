@@ -269,7 +269,7 @@ export const useTargetDetailStore = defineStore("chiTietMucTieuStore", {
           this.amountOfTarget = false;
         } else {
           Dialog.create({
-            message: `Tạo mục tiêu thất bại: ${result.data.message}`,
+            message: `Tạo môn học thất bại: ${result.data.message}`,
             cancel: true,
             html: true,
             ok: false,
@@ -319,7 +319,7 @@ export const useTargetDetailStore = defineStore("chiTietMucTieuStore", {
       try {
         const storeUtils = useUtilStore();
         Dialog.create({
-          message: `Bạn chắc chắn muốn xoá mục tiêu: <strong>${objDelete.name}</strong>?`,
+          message: `Bạn chắc chắn muốn xoá môn học: <strong>${objDelete.name}</strong>?`,
           cancel: true,
           html: true,
         }).onOk(async () => {

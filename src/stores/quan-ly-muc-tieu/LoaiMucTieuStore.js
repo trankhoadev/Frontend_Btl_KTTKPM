@@ -95,7 +95,7 @@ export const useLoaiMucTieuStore = defineStore("storeLoaiMucTieu", {
         } else {
           Dialog.create({
             title: "Thông báo",
-            message: `Thêm loại mục tiêu thất bại: ${result.data.message}`,
+            message: `Thêm loại môn học thất bại: ${result.data.message}`,
             ok: true,
             cancel: false,
           });
@@ -108,7 +108,7 @@ export const useLoaiMucTieuStore = defineStore("storeLoaiMucTieu", {
     async deleteTargetType(objectDelete) {
       Dialog.create({
         title: "Cảnh báo",
-        message: `Bạn có chắc muốn xóa loại mục tiêu: <b>${objectDelete?.name}</b> không ?`,
+        message: `Bạn có chắc muốn xóa loại môn học: <b>${objectDelete?.name}</b> không ?`,
         html: true,
         ok: true,
         cancel: true,
@@ -124,7 +124,7 @@ export const useLoaiMucTieuStore = defineStore("storeLoaiMucTieu", {
             if (check) {
               Dialog.create({
                 title: "Thông báo",
-                message: "Loại mục tiêu đang được sử dụng, không được xóa !",
+                message: "Loại môn học đang được sử dụng, không được xóa !",
                 ok: true,
                 cancel: false,
               });
@@ -177,7 +177,7 @@ export const useLoaiMucTieuStore = defineStore("storeLoaiMucTieu", {
         //     Dialog.create({
         //       title: "Thông báo",
         //       message:
-        //         "Trùng tên loại mục tiêu, bạn có muốn bật loại mục tiêu này lên lại không ?",
+        //         "Trùng tên loại môn học, bạn có muốn bật loại môn học này lên lại không ?",
         //       ok: true,
         //       cancel: false,
         //     }).onOk(async () => {
@@ -226,7 +226,7 @@ export const useLoaiMucTieuStore = defineStore("storeLoaiMucTieu", {
         if (sumArrayName.includes(inputData.name.trim())) {
           Dialog.create({
             title: "Thông báo",
-            message: "Tên loại mục tiêu đã tồn tại !",
+            message: "Tên loại môn học đã tồn tại !",
             ok: true,
             cancel: false,
           });

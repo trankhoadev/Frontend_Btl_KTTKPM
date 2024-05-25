@@ -12,9 +12,8 @@ export default {
   loginWarningSamePassword: "Mật khẩu nhập lại không khớp",
   loginRememberPassword: "Nhớ mật khẩu",
   loginSignInBtn: "Đăng nhập",
-  loginCompanyName: "AT DaTa",
-  loginCompanyDesc:
-    "Cung cấp dịch vụ tư vấn về Hệ thống quản trị tích hợp toàn diện cho các Doanh nghiệp",
+  loginCompanyName: "Đăng ký học phần",
+  loginCompanyDesc: "Trường Đại học Công nghiệp Thành phố Hồ Chí Minh",
   loginCreateAccount: "Đăng ký",
   loginBackToLogin: "Quay lại trang đăng nhập",
   loginSignUpBtn: "Đăng ký",
@@ -50,7 +49,7 @@ export default {
   importStructAddStructTitle: "Thêm tổ chức",
   importStructAddJobTitle: "Thêm chức danh",
 
-  /* - Import mục tiêu */
+  /* - Import môn học */
   importTargetWarningNotSetTargetType:
     "Bạn chưa thiết lập kỳ học. Đi đến trang thiết lập ngay ?",
   importTargetWarningNotSetFormula:
@@ -66,10 +65,10 @@ export default {
   importTargetTitleStep1: "Thông tin",
   importTargetTitleStep2: "Import file",
   importTargetTitleStep3: "Tổng kết",
-  importTargetInputTargetName: "Tên mục tiêu",
+  importTargetInputTargetName: "Tên môn học",
   importTargetInputDesc: "Mô tả phương pháp tính",
   importTargetInputAssign: "Gán cho tổ chức",
-  importTargetInputType: "Loại mục tiêu",
+  importTargetInputType: "Loại môn học",
   importTargetInputFormula: "Phương pháp tính",
   importTargetInputFrequency: "Tần suất đo",
   importTargetInputDepartment: "Nguồn đo",
@@ -78,24 +77,24 @@ export default {
   importTargetInputDefaultValue: "Chỉ tiêu phấn đấu",
   importTargetInputMinValue: "Ngưỡng đạt",
   importTargetInputSourceDepartment: "Văn bản nguồn",
-  importTargetTitleAdd: "Thêm mục tiêu con cho",
+  importTargetTitleAdd: "Thêm môn học con cho",
 
   /**
    * Phân bổ - Allocation
    */
   //Phân bổ theo kỳ - Allocation by time
-  allocateTimeTab1: "Mục tiêu đơn vị theo kỳ",
-  allocateTimeTab2: "Tổng hợp mục tiêu theo kỳ",
-  allocateTimeTableTab1Name: "Mục tiêu đơn vị theo kỳ",
-  allocateTimeTableTab2Name: "Phân bổ mục tiêu chức danh theo kỳ",
+  allocateTimeTab1: "môn học đơn vị theo kỳ",
+  allocateTimeTab2: "Tổng hợp môn học theo kỳ",
+  allocateTimeTableTab1Name: "môn học đơn vị theo kỳ",
+  allocateTimeTableTab2Name: "Phân bổ môn học chức danh theo kỳ",
 
   //Phân bổ theo kỳ - Allocation by organization
-  allocateOrganizationTab1: "Phân bổ mục tiêu chức danh theo kỳ",
-  allocateOrganizationTab2: "DS Mục tiêu chức danh theo kỳ",
-  allocateOrganizationTab3: "Điều chỉnh mục tiêu cá nhân",
-  allocateOrganizationTableTab1Name: "Phân bổ mục tiêu chức danh theo kỳ",
-  allocateOrganizationTableTab2Name: "DS Mục tiêu chức danh theo kỳ",
-  allocateOrganizationTableTab3Name: "Điều chỉnh mục tiêu cá nhân",
+  allocateOrganizationTab1: "Phân bổ môn học chức danh theo kỳ",
+  allocateOrganizationTab2: "DS môn học chức danh theo kỳ",
+  allocateOrganizationTab3: "Điều chỉnh môn học cá nhân",
+  allocateOrganizationTableTab1Name: "Phân bổ môn học chức danh theo kỳ",
+  allocateOrganizationTableTab2Name: "DS môn học chức danh theo kỳ",
+  allocateOrganizationTableTab3Name: "Điều chỉnh môn học cá nhân",
 
   /**
    * Quản lý đơn vị - Organizational management
@@ -115,14 +114,14 @@ export default {
   structTreeTitleAdd: "Thêm đơn vị con cho",
 
   /**
-   * Quản lý mục tiêu - Target management
+   * Quản lý môn học - Target management
    */
 
-  //Điều chỉnh mục tiêu - Adjust targets
-  adjustTargetTitle: "Chi tiết mục tiêu",
-  adjustTargetInputTargetName: "Tên mục tiêu",
-  adjustTargetInputTargetParent: "Mục tiêu cha",
-  adjustTargetInputTargetType: "Loại mục tiêu",
+  //Điều chỉnh môn học - Adjust targets
+  adjustTargetTitle: "Chi tiết môn học",
+  adjustTargetInputTargetName: "Tên môn học",
+  adjustTargetInputTargetParent: "môn học cha",
+  adjustTargetInputTargetType: "Loại môn học",
   adjustTargetInputFormula: "Phương pháp tính",
   adjustTargetInputFrequency: "Tần suất đo",
   adjustTargetInputDefaultValue: "Chỉ tiêu (Phấn đấu)",
@@ -132,7 +131,7 @@ export default {
   adjustTargetInputTechName: "Tên kỹ thuật",
   adjustTargetInputUnit: "Đơn vị tính",
   adjustTargetInputSourceMeasure: "Nguồn đo",
-  adjustTargetTitleAdd: "Thêm mục tiêu con cho",
+  adjustTargetTitleAdd: "Thêm môn học con cho",
 
   //Target Type
   targetTitle: "Danh Sách Học Kỳ",
@@ -213,16 +212,16 @@ export default {
   taskbarImportCompanyStructure: "Import cây tổ chức",
   taskbarImportTarget: "Import môn học",
   taskbarDivide: "Phân bổ",
-  taskbarViewTableNeedAllocate: "Xem bảng mục tiêu cần phân bổ",
-  taskbarTargetCompany: "Phân bổ mục tiêu theo tổ chức",
+  taskbarViewTableNeedAllocate: "Xem bảng môn học cần phân bổ",
+  taskbarTargetCompany: "Phân bổ môn học theo tổ chức",
   taskbarDivideTime: "Phân bổ theo kỳ",
   taskbarDivideCompany: "Phân bổ theo cá nhân",
   taskbarCompany: "Quản lý tổ chức",
   taskbarLevelCompany: "Cấp tổ chức",
   taskbarTreeCompany: "Sơ đồ tổ chức",
   taskbarTarget: "Quản lý khóa học",
-  taskbarViewTableTarget: "Xem bảng mục tiêu",
-  taskbarAdjustTarget: "Điều chỉnh mục tiêu",
+  taskbarViewTableTarget: "Xem bảng môn học",
+  taskbarAdjustTarget: "Điều chỉnh môn học",
   taskbarTargetType: "Học kỳ",
   taskbarFrequentlyCheck: "Niên khóa",
   taskbarTargetSetup: "Thiết lập thông số đầu vào",
@@ -234,7 +233,7 @@ export default {
   taskbarManagePermission: "Quản lý phân quyền",
   taskbarListEmployee: "Danh sách nhân viên",
   taskbarSettings: "Cài đặt ứng dụng",
-  taskbarSettingsTarget: "Cài đặt mục tiêu",
+  taskbarSettingsTarget: "Cài đặt môn học",
   taskbarEmployeeJob: "Chức danh nhân viên",
   taskbarChart: "Báo cáo",
   taskbarChartCompany: "Báo cáo theo đơn vị",
@@ -266,13 +265,13 @@ export default {
   funcWarningSelectCompanyData:
     "Vui lòng chọn đơn vị bất kỳ bên sơ đồ tổ chức bên trái để tiếp tục !",
   funcWarningSelectTargetData:
-    "Vui lòng chọn mục tiêu bất kỳ bên sơ đồ tổ chức bên trái để tiếp tục !",
+    "Vui lòng chọn môn học bất kỳ bên sơ đồ tổ chức bên trái để tiếp tục !",
   funcInputWarningFillData: "Không được để rỗng",
   funcWarningFillRole: "Vui lòng chọn phân quyền !",
   funcGoToPage: "Đi tới trang",
   funcTreeInputStruct: "Tìm đơn vị tổ chức...",
   funcTreeInputRouter: "Tìm đường dẫn...",
-  funcTreeInputTarget: "Tìm mục tiêu...",
+  funcTreeInputTarget: "Tìm môn học...",
   funcGoToPage: "Đi tới trang",
 
   /**

@@ -50,7 +50,7 @@ provide(THEME_KEY, isDark.value === true ? "dark" : "light");
 
 const option = ref({
   title: {
-    text: "Biểu đồ thống kê mục tiêu theo đơn vị",
+    text: "Biểu đồ thống kê môn học theo đơn vị",
     left: "center",
   },
   tooltip: {
@@ -70,7 +70,7 @@ const option = ref({
   },
   series: [
     {
-      name: "Số lượng mục tiêu",
+      name: "Số lượng môn học",
       type: "pie",
       radius: "55%",
       center: ["50%", "60%"],
@@ -95,7 +95,7 @@ const option = ref({
 const randomData = [
   {
     title: {
-      text: "Biểu đồ thống kê mục tiêu theo đơn vị",
+      text: "Biểu đồ thống kê môn học theo đơn vị",
       left: "center",
     },
     tooltip: {
@@ -115,7 +115,7 @@ const randomData = [
     },
     series: [
       {
-        name: "Số lượng mục tiêu",
+        name: "Số lượng môn học",
         type: "pie",
         radius: "55%",
         center: ["50%", "60%"],
@@ -138,7 +138,7 @@ const randomData = [
   },
   {
     title: {
-      text: "Biểu đồ thống kê mục tiêu theo đơn vị",
+      text: "Biểu đồ thống kê môn học theo đơn vị",
       left: "center",
     },
     tooltip: {
@@ -157,7 +157,7 @@ const randomData = [
     },
     series: [
       {
-        name: "Số lượng mục tiêu",
+        name: "Số lượng môn học",
         type: "pie",
         radius: "55%",
         center: ["50%", "60%"],
@@ -180,7 +180,7 @@ const randomData = [
 
   {
     title: {
-      text: "Biểu đồ thống kê mục tiêu theo đơn vị",
+      text: "Biểu đồ thống kê môn học theo đơn vị",
       left: "center",
     },
     tooltip: {
@@ -194,7 +194,7 @@ const randomData = [
     },
     series: [
       {
-        name: "Số lượng mục tiêu",
+        name: "Số lượng môn học",
         type: "pie",
         radius: "55%",
         center: ["50%", "60%"],
@@ -216,7 +216,7 @@ const randomData = [
 
   {
     title: {
-      text: "Biểu đồ thống kê mục tiêu theo đơn vị",
+      text: "Biểu đồ thống kê môn học theo đơn vị",
       left: "center",
     },
     tooltip: {
@@ -235,7 +235,7 @@ const randomData = [
     },
     series: [
       {
-        name: "Số lượng mục tiêu",
+        name: "Số lượng môn học",
         type: "pie",
         radius: "55%",
         center: ["50%", "60%"],

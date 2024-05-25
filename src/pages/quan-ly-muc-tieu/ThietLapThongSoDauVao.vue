@@ -700,7 +700,7 @@ const toggleValue = () => {
     >
       <q-card-section class="row items-center">
         <span class="q-ml-sm text-h5 text-bold"
-          >Danh sách các loại mục tiêu đã xóa</span
+          >Danh sách các loại môn học đã xóa</span
         >
       </q-card-section>
 

@@ -162,18 +162,17 @@ const divideArray = (arr, start, end) => {
    *
    */
   const propertyNames = [
-    "beLongTo",
     "name",
     "unit",
     "methodAndCalDescription",
     "frequencyMeasure",
-    "measureName",
-    "documentSource",
+    // "measureName",
+    // "documentSource",
     "formulaName",
     "targetTypeName",
-    "importanceLevel",
-    "defaultValue",
-    "minValue",
+    // "importanceLevel",
+    // "defaultValue",
+    // "minValue",
     "idAssign",
   ];
 
@@ -237,7 +236,7 @@ const divideArray = (arr, start, end) => {
     }
 
     try {
-      dataObject.frequencyMeasure = dataObject.frequencyMeasure.toUpperCase();
+      dataObject.frequencyMeasure = dataObject.frequencyMeasure.toString();
     } catch (err) {
       Dialog.create({
         title: "Thông báo",
@@ -302,8 +301,8 @@ const buildTree = (arr) => {
     });
   });
 
-  expectedTree.value = structureTarget.value;
-  storeImportMucTieu.targetTreeData = [...expectedTree.value];
+  expectedTree.value = dataExpect;
+  storeImportMucTieu.targetTreeData = dataExpect;
 };
 
 /* read excel file and output json data */
@@ -488,7 +487,7 @@ function updateItemById(inputArr, id, objectUpdate) {
 /* Function find node by id and remove node */
 function removeNodeById(inputData, id) {
   Dialog.create({
-    message: `Xác nhận xóa dữ liệu mục tiêu: <b>${storeImportMucTieu.labelRemoveName}</b> ?`,
+    message: `Xác nhận xóa dữ liệu môn học: <b>${storeImportMucTieu.labelRemoveName}</b> ?`,
     html: true,
     ok: true,
     cancel: true,
