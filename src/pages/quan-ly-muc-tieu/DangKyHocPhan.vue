@@ -123,7 +123,7 @@ watch(
               :nodes="storeUtil.targetDataTree"
               node-key="_id"
               selected-color="primary"
-              tick-strategy="strict"
+              tick-strategy="leaf"
               v-model:selected="targetDetailStore.targetSelected"
               v-model:ticked="storeUtil.targetDataCourseTickedData"
               default-expand-all

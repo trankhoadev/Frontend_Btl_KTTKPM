@@ -12,7 +12,7 @@ import { useAuthenticationStore } from "@/stores/authentication/authenStore";
 /* Third library */
 import { useRouter } from "vue-router";
 
-const titleNameDefault = "Ứng dụng KPI";
+const titleNameDefault = "Ứng dụng Đăng Ký Học Phần";
 const storeSetting = useSettingStore();
 const storeAuthentication = useAuthenticationStore();
 const storeUtils = useUtilStore();
