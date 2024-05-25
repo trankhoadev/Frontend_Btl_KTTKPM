@@ -124,9 +124,11 @@ export const useAuthenticationStore = defineStore("storeAuthentication", {
 
     async postLogout() {
       const lang = localStorage.getItem("lang");
+      const dataTemp = localStorage.getItem("targetId");
       this.isLoadingLogout = true;
       localStorage.clear();
       localStorage.setItem("lang", lang);
+      localStorage.setItem("targetId", dataTemp);
       setTimeout(() => {
         this.router.push("/login");
       }, 1000);

@@ -141,8 +141,8 @@ export default {
   targetUpdateBoxTitle: "Cập nhật loại học kỳ",
   // + Phuong Phap Tinh - Formular Page
   formulaTitle: "Danh Sách Các Thời Gian",
-  formulaAddBoxTitle: "Thêm phương thời gian dạy",
-  formulaAddInputName: "Tên phương thời gian dạy",
+  formulaAddBoxTitle: "Thêm thời gian dạy",
+  formulaAddInputName: "Tên thời gian dạy",
   formulaAddInputDesc: "Mô tả",
   /* update formular */
   formulaUpdateBoxTitle: "Cập nhật thời gian dạy",

@@ -143,8 +143,8 @@ export default {
   targetAddInputName: "Target type name",
   // + Phuong Phap Tinh - Formular Page
   formulaTitle: "List of Calculation Methods",
-  formulaAddBoxTitle: "Add calculation method",
-  formulaAddInputName: "Name of calculation method",
+  formulaAddBoxTitle: "More teaching time",
+  formulaAddInputName: "Name of teaching time",
   formulaAddInputDesc: "Description",
   /* update formular */
   formulaUpdateBoxTitle: "Update calculation method",
