@@ -285,5 +285,9 @@ export default {
 
   titleV1: "Học phần đã đăng ký",
   titleV2: "Đăng ký học phần",
+  titleV3: "Xem lịch học",
+  titleV4: "Thống kê",
+  titleV5: "Trang tổng quan thống kê",
+  titleV6: "Lịch học trong tuần",
   button1: "Đăng ký",
 };

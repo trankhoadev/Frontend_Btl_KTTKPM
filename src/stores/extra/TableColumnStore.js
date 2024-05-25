@@ -611,6 +611,58 @@ export const useTableColumnStore = defineStore("tableColumnStore", {
       },
     ],
 
+    columnEmployeesTable2: [
+      {
+        name: "techName",
+        required: true,
+        label: "MÃ HỌC PHẦN",
+        field: "techName",
+        align: "left",
+
+        headerStyle: "font-size: 1.1em; font-weight: bold",
+      },
+
+      {
+        name: "name",
+        required: true,
+        label: "TÊN",
+        field: "name",
+        align: "left",
+
+        headerStyle: "font-size: 1.1em; font-weight: bold",
+      },
+
+      {
+        name: "methodAndCalDescription",
+        required: true,
+        label: "NGÀY HỌC",
+        field: "methodAndCalDescription",
+        align: "left",
+
+        headerStyle: "font-size: 1.1em; font-weight: bold",
+      },
+
+      {
+        name: "formulaName",
+        required: true,
+        label: "GIỜ HỌC",
+        field: "formulaName",
+        align: "left",
+
+        headerStyle: "font-size: 1.1em; font-weight: bold",
+      },
+
+      {
+        name: "name",
+        required: true,
+        label: "THỜI GIAN ĐĂNG KÝ",
+        field: "name",
+        align: "left",
+
+        headerStyle: "font-size: 1.1em; font-weight: bold",
+      },
+    ],
+
     columnJobsTable: [
       {
         name: "name",

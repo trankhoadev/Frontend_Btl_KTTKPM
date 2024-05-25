@@ -286,5 +286,9 @@ export default {
 
   titleV1: "Registered course",
   titleV2: "Register for the course",
+  titleV3: "View class schedule",
+  titleV4: "Statistical",
+  titleV5: "Statistics dashboard",
+  titleV6: "Class schedule for the week",
   button1: "Submit",
 };

@@ -89,7 +89,9 @@ export const useAuthenticationStore = defineStore("storeAuthentication", {
           setTimeout(() => {
             // Loading.hide();
             this.isLoadingLogin = false;
-            this.router.push("/chart/general");
+            this.userName === "student"
+              ? this.router.push("/chart/general")
+              : this.router.push("/");
             Notify.create({
               type: "positive",
               message: "Đăng nhập thành công !",
@@ -221,7 +223,6 @@ export const useAuthenticationStore = defineStore("storeAuthentication", {
           routerMethod: i.method,
         }));
 
-        console.log(finalResult);
         return finalResult;
 
         if (result.data.status === 200) {

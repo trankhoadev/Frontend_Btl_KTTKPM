@@ -15,9 +15,10 @@ import DieuChinhMucTieu from "@/pages/quan-ly-muc-tieu/DieuChinhMucTieu.vue";
 import XemBangMucTieu from "@/pages/quan-ly-muc-tieu/XemBangMucTieu.vue";
 import ThietLapThongSoDauVao from "@/pages/quan-ly-muc-tieu/ThietLapThongSoDauVao.vue";
 import DangKyHocPhan from "@/pages/quan-ly-muc-tieu/DangKyHocPhan.vue";
+import XemLichHoc from "@/pages/quan-ly-muc-tieu/XemLichHoc.vue";
 
 /* Nhan Vien */
-import DanhSachNhanVien from "@/pages/quan-ly-nhan-vien/DanhSachNhanVien.vue";
+import DanhSachKhoaHoc from "@/pages/quan-ly-nhan-vien/DanhSachKhoaHoc.vue";
 
 /* Cai Dat */
 import CaiDatMucTieu from "@/pages/settings/CaiDatMucTieu.vue";
@@ -85,6 +86,12 @@ const routes = [
       },
 
       {
+        path: "time",
+        component: XemLichHoc,
+        meta: { requiresAuth: true },
+      },
+
+      {
         path: "table",
         component: XemBangMucTieu,
         meta: { requiresAuth: true },
@@ -111,7 +118,7 @@ const routes = [
     children: [
       {
         path: "list",
-        component: DanhSachNhanVien,
+        component: DanhSachKhoaHoc,
         meta: { requiresAuth: true },
       },
     ],

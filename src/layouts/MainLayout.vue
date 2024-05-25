@@ -102,9 +102,15 @@ onMounted(async () => {
           icon: "ads_click",
           items: [
             {
+              href: "/target/time",
+              iconName: "schedule",
+              contentName: t("titleV3"),
+            },
+
+            {
               href: "/target/register",
               iconName: "edit_document",
-              contentName: "Đăng ký học phần",
+              contentName: t("titleV2"),
             },
 
             {
@@ -115,18 +121,18 @@ onMounted(async () => {
           ],
         },
 
-        // {
-        //   label: t("taskbarEmployee"),
-        //   group: true,
-        //   icon: "person_search",
-        //   items: [
-        //     {
-        //       href: "/employees/job",
-        //       iconName: "engineering",
-        //       contentName: t("taskbarEmployeeJob"),
-        //     },
-        //   ],
-        // },
+        {
+          label: t("titleV4"),
+          group: true,
+          icon: "stacked_bar_chart",
+          items: [
+            {
+              href: "/chart/general",
+              iconName: "dns",
+              contentName: t("titleV5"),
+            },
+          ],
+        },
       ];
       break;
 
@@ -613,7 +619,7 @@ const filterData = (initialData, routerHrefArray) => {
             <div class="q-py-sm flex column">
               <span class="text-h5 text-bold">{{ userName }}</span>
 
-              <span class='text-subtitle1'>
+              <span class="text-subtitle1">
                 {{
                   userName === "admin"
                     ? "Quản lý ứng dụng"
